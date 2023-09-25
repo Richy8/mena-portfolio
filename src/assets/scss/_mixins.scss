@@ -1,0 +1,192 @@
+// @use "sass:math";
+
+// CONVERT PX TO REM
+@function toRem($size) {
+  $result: calc($size / 16);
+  @return #{$result}rem;
+}
+
+/* ===========================
+FULL BACKGROUND COVER DISPLAY
+============================== */
+@mixin background-cover {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* =============================
+FULL BACKGROUND CONTAIN DISPLAY
+================================ */
+@mixin background-contain {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* ====================
+FULL WIDTH AND HEIGHT
+======================= */
+@mixin full-width-height {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+/* =================
+STRETCHED AREA
+==================== */
+@mixin stretch-area {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+}
+
+/* =================
+PLACE AT CENTER
+==================== */
+@mixin center-placement {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin center-y {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@mixin center-x {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* ======================
+FIXED FULL DISPLAY AREA
+========================= */
+@mixin fixed-display-area {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+/* ====================
+SQUARE SHAPE BUILDER
+======================= */
+@mixin square-shape($value) {
+  min-width: toRem($value);
+  min-height: toRem($value);
+  width: toRem($value);
+  height: toRem($value);
+}
+
+/* ======================
+RECTANGLE SHAPE BUILDER
+========================= */
+@mixin rectangle-shape($width, $height) {
+  min-width: toRem($width);
+  min-height: toRem($height);
+  width: toRem($width);
+  height: toRem($height);
+}
+
+// =====================
+// FLEX STYLES
+// =====================
+@mixin flex-setup($type, $wrap: "") {
+  display: flex;
+
+  @if $type == "row" {
+    flex-direction: #{$type};
+    flex-wrap: #{$wrap};
+  } @else {
+    flex-direction: #{$type};
+  }
+}
+
+@mixin flex-alignment($justify, $align) {
+  justify-content: #{$justify};
+  align-items: #{$align};
+}
+
+// =======================
+// FLEX ROW WRAP STYLES
+// =======================
+@mixin flex-row-wrap($justify-content, $align-items) {
+  @include flex-setup("row", "wrap");
+  @include flex-alignment($justify-content, $align-items);
+}
+
+// =======================
+// FLEX ROW NOWRAP STYLES
+// =======================
+@mixin flex-row-nowrap($justify-content, $align-items) {
+  @include flex-setup("row", "nowrap");
+  @include flex-alignment($justify-content, $align-items);
+}
+
+// =======================
+// FLEX COLUMN STYLES
+// =======================
+@mixin flex-column($justify-content, $align-items) {
+  @include flex-setup("column");
+  @include flex-alignment($justify-content, $align-items);
+}
+
+/* =================
+TRUNCATE TEXT
+==================== */
+@mixin text-truncate() {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* ==================
+SMOOTH TRANSITIONING
+===================== */
+@mixin transition($timing) {
+  transition: all #{$timing} ease-in-out;
+}
+
+/* ==================
+FONT STYLING
+===================== */
+@mixin font-height($size, $height) {
+  font-size: toRem($size);
+  line-height: toRem($height);
+}
+
+/* ==================
+BOX SHADOW
+===================== */
+@mixin box-shadow($color: $brand-black) {
+  box-shadow: 0 toRem(1) toRem(4) rgba($color, 0.15);
+}
+
+/* ==================
+RESPONSIVE IMAGES 
+===================== */
+@mixin responsive-width($min-width, $max-width) {
+  min-width: $min-width;
+  width: auto;
+  max-width: $max-width;
+  height: auto;
+}
+
+@mixin responsive-height($min-height, $max-height) {
+  min-height: $min-height;
+  height: auto;
+  max-height: $max-height;
+  width: auto;
+}

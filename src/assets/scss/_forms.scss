@@ -1,0 +1,81 @@
+/* =================
+    FORM STYLING
+==================== */
+
+// INPUT PLACEHOLDER
+input,
+textarea {
+  &::placeholder {
+    color: $brand-faded-grey !important;
+    font-size: toRem(16);
+  }
+  &:focus {
+    outline: none;
+  }
+}
+
+/* Chrome, Safari, Edge, Opera */
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+// FORM GROUP
+.form-group {
+  margin-bottom: toRem(40);
+  position: relative;
+}
+
+// FORM LABEL
+.form-label {
+  font-family: "Eaves-Bold";
+  @include font-height(17, 22);
+  padding-bottom: toRem(8);
+  text-transform: none;
+  margin-bottom: 0;
+  padding-top: 0;
+
+  @include breakpoint-down(sm) {
+    @include font-height(16, 22);
+  }
+}
+
+// FORM INPUT STYLING
+.form-control {
+  border: toRem(1) solid rgba($brand-faded-grey, 0.35);
+  @include font-height(16, 22);
+  background-color: transparent !important;
+  padding: toRem(10) toRem(14);
+  color: $brand-off-grey !important;
+  @include transition(0.3s);
+  border-radius: toRem(6);
+  box-sizing: border-box;
+  vertical-align: middle;
+  position: relative;
+  box-shadow: unset;
+  overflow: hidden;
+  appearance: none;
+  width: 100%;
+  z-index: 1;
+  outline: 0;
+  margin: 0;
+  left: 0;
+  top: 0;
+
+  &:hover {
+    border-color: $brand-yellow;
+  }
+
+  &:focus {
+    border-color: $brand-yellow;
+    box-shadow: unset;
+  }
+}

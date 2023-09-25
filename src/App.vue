@@ -6,6 +6,9 @@
       </transition>
     </router-view>
 
+    <!-- MENU ITEMS CONTAINER -->
+    <menu-area />
+
     <!-- CURSOR STATE -->
     <cursor-state />
   </div>
@@ -13,16 +16,18 @@
 
 <script>
 import cursorState from "@/components/GlobalComps/cursor-state";
+import MenuArea from "@/components/GlobalComps/menu-area";
 
 export default {
   name: "app",
 
   components: {
     cursorState,
+    MenuArea,
   },
 
   mounted() {
-    this.$color.setPageBackgroundColor("#eaeaea");
+    this.$color.setPageBackgroundColor("#1A1A1A");
   },
 };
 </script>
@@ -30,6 +35,11 @@ export default {
 <style lang="scss">
 body {
   cursor: none;
+  scroll-behavior: smooth;
+
+  @include breakpoint-down(sm) {
+    cursor: unset;
+  }
 }
 
 .fade-enter {

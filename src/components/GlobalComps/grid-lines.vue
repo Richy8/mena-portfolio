@@ -18,7 +18,7 @@ export default {
 <style lang="scss" scoped>
 .grid-container {
   margin-left: toRem(-10);
-  @include flex-row-between-nowrap;
+  @include flex-row-nowrap("space-between", "center");
 
   .grid-line {
     height: 100vh;

@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="cursor-wrapper">
     <div class="cursor-state cursor"></div>
     <div class="cursor-state-pointer cursor"></div>
   </div>
@@ -26,6 +26,12 @@ export default {
 </script>
 
 <style lang="scss">
+.cursor-wrapper {
+  @include breakpoint-down(sm) {
+    display: none;
+  }
+}
+
 .cursor {
   position: fixed;
   transform: translate(-50%, -50%);
@@ -33,6 +39,7 @@ export default {
   border-radius: 50%;
   left: 0;
   top: 0;
+  z-index: 9999;
 }
 
 .cursor-state {

@@ -4,8 +4,9 @@ module.exports = {
 
   css: {
     loaderOptions: {
-      sass: {
-        prependData: `@import "./public/scss/_colors.scss"; @import "./public/scss/_breakpoints.scss"; @import "./public/scss/_mixins.scss";`,
+      scss: {
+        implementation: require("sass"),
+        prependData: `@import "@/assets/scss/_colors.scss"; @import "@/assets/scss/_breakpoints.scss"; @import "@/assets/scss/_mixins.scss";`,
       },
     },
   },

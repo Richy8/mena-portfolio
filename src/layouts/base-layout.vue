@@ -12,6 +12,9 @@
       </transition>
     </router-view>
 
+    <!-- CONTACT SECTION -->
+    <contact-section />
+
     <!-- FOOTER NAVIGATION -->
     <footer-nav />
   </div>
@@ -21,6 +24,7 @@
 import topNav from "@/components/GlobalComps/top-nav";
 import footerNav from "@/components/GlobalComps/footer-nav";
 import contactCircle from "@/components/GlobalComps/contact-circle";
+import contactSection from "@/components/HomeComps/contact-section";
 
 export default {
   name: "baseLayout",
@@ -29,6 +33,7 @@ export default {
     topNav,
     footerNav,
     contactCircle,
+    contactSection,
   },
 };
 </script>

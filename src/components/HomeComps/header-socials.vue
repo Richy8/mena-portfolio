@@ -1,17 +1,21 @@
 <template>
-  <div class="wrapper container">
+  <div class="wrapper container mx-auto">
     <div class="header-socials vertical-text">
       <!-- FACEBOOK -->
-      <a href="">Instagram</a>
+      <a href="https://www.instagram.com/efe_mena/" target="_blank"
+        >Instagram</a
+      >
 
       <!-- TWITTER -->
-      <a href="">Twitter</a>
+      <a href="https://twitter.com/ElvisRichie" target="_blank">Twitter</a>
 
       <!-- LINKEDIN -->
-      <a href="">LinkedIn</a>
+      <a href="https://www.linkedin.com/in/efemena-elvis/" target="_blank"
+        >LinkedIn</a
+      >
 
       <!-- GITHUB -->
-      <a href="">Github</a>
+      <a href="https://github.com/Richy8" target="_blank">Github</a>
     </div>
   </div>
 </template>
@@ -26,9 +30,21 @@ export default {
 .wrapper {
   @include center-placement;
 
+  @include breakpoint-down(xl) {
+    width: 95%;
+  }
+
+  @include breakpoint-down(sm) {
+    display: none;
+  }
+
   .header-socials {
-    @include center-y;
-    right: toRem(5.5);
+    @include center-y;  
+    right: toRem(2);
+
+    @include breakpoint-down(xl) {
+      right: 0;
+    }
 
     a {
       @include font-height(13.5, 18);

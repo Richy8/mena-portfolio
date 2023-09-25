@@ -1,10 +1,11 @@
 <template>
   <!-- CONTACT ON WHATSAPP -->
   <div
-    class="contact-circle position-fixed pointer overflow-hidden index-1"
+    class="contact-circle position-fixed pointer overflow-hidden"
     ref="contactCircle"
     @mouseenter="showExpandedView"
     @mouseleave="hideExpandedView"
+    @click="redirectToBookNowSession"
   >
     <!-- TEXT CONTEXT -->
     <div class="text-content font-weight-600 smooth-transition">
@@ -36,6 +37,10 @@ export default {
     hideExpandedView() {
       this.$refs.contactCircle.classList.remove("show-expanded-view");
     },
+
+    redirectToBookNowSession() {
+      this.$router.push({ path: "/schedule-session" });
+    },
   },
 };
 </script>
@@ -47,7 +52,20 @@ export default {
   @include square-shape(46);
   border-radius: 50%;
   bottom: toRem(20);
-  right: 4%;
+  right: 6%;
+  z-index: 9999;
+
+  @include breakpoint-down(xl) {
+    right: 2%;
+  }
+
+  @include breakpoint-down(lg) {
+    @include square-shape(42);
+  }
+
+  @include breakpoint-down(xs) {
+    display: none;
+  }
 
   .wrapper {
     transition: all 0.3s ease-in-out;
@@ -61,14 +79,18 @@ export default {
   .icon {
     @include center-placement;
     font-size: toRem(24);
+
+     @include breakpoint-down(lg) {
+       font-size: toRem(20);
+    }
   }
 }
 
 .show-expanded-view {
+  @include flex-row-nowrap("flex-start", "center");
+  @include rectangle-shape(203, 46);
   color: $brand-sharp-dark !important;
   background: $brand-yellow;
-  @include rectangle-shape(203, 46);
-  @include flex-row-start-nowrap;
   border-radius: toRem(50);
 
   .text-content {

@@ -5,34 +5,47 @@
       <div class="footer-top">
         <div class="top-left">
           <!-- LOGO IMAGE -->
-          <img
-            :src="mxStaticImg('mena-light.png', 'logo')"
-            alt="mena_brand_logo"
-            class="logo-img"
-          />
-
-          <!-- BRAND NAME -->
-          <h2 class="brand-name stylish-font">MENA</h2>
+          <BrandLogo :has_index="false" />
         </div>
 
         <div class="top-right">
-          <a href="" class="social social-fb">
+          <a
+            href="https://web.facebook.com/Lordelvis.95"
+            target="_blank"
+            class="social social-fb"
+          >
             <div class="icon icon-facebook"></div>
           </a>
 
-          <a href="" class="social social-tw">
+          <a
+            href="https://twitter.com/ElvisRichie"
+            target="_blank"
+            class="social social-tw"
+          >
             <div class="icon icon-twitter"></div>
           </a>
 
-          <a href="" class="social social-in">
+          <a
+            href="https://www.instagram.com/efe_mena/"
+            target="_blank"
+            class="social social-in"
+          >
             <div class="icon icon-instagram"></div>
           </a>
 
-          <a href="" class="social social-ln">
+          <a
+            href="https://www.linkedin.com/in/efemena-elvis/"
+            target="_blank"
+            class="social social-ln"
+          >
             <div class="icon icon-linkedin"></div>
           </a>
 
-          <a href="" class="social social-gh">
+          <a
+            href="https://github.com/Richy8"
+            target="_blank"
+            class="social social-gh"
+          >
             <div class="icon icon-github"></div>
           </a>
         </div>
@@ -43,7 +56,8 @@
         <div class="bottom-left">
           All Rights Reserved. &copy; 2022 Mena Portfolio
         </div>
-        <div class="bottom-righr">
+
+        <div class="bottom-right">
           Designed with <span class="brand-red">&#10084;</span> and
           <span class="brand-white">&#9749;</span> by Deskangle
         </div>
@@ -52,26 +66,28 @@
   </footer>
 </template>
 
-<script>
-export default {
-  name: "footerNav",
-};
+<script setup>
+import BrandLogo from "@/components/GlobalComps/brand-logo";
 </script>
 
 <style lang="scss" scoped>
 footer {
-  background: $brand-sharp-grey;
-  padding: toRem(20) 0 toRem(42);
+  padding: toRem(20) 0 toRem(48);
   margin: toRem(30) auto 0;
 
   .footer {
     .footer-top {
       border-bottom: toRem(1) solid rgba($brand-faded-grey, 0.25);
-      @include flex-row-between-nowrap;
+      @include flex-row-nowrap("space-between", "center");
       padding: toRem(27) 0;
 
+      @include breakpoint-down(sm) {
+        @include flex-column('flex-start', 'center'); 
+        gap: toRem(30);
+      }
+
       .top-left {
-        @include flex-row-start-nowrap;
+        @include flex-row-nowrap("flex-start", "center");
 
         .logo-img {
           @include rectangle-shape(57, 37);
@@ -88,20 +104,20 @@ footer {
       }
 
       .top-right {
-        @include flex-row-end-nowrap;
-        gap: toRem(10);
+        @include flex-row-nowrap("flex-end", "center");
+        gap: toRem(14);
 
         .social {
-          border: toRem(1) solid $brand-faded-grey;
+          border: toRem(1) solid rgba($brand-faded-grey, 0.5);
           @include transition(0.45s);
-          @include square-shape(38);
+          @include square-shape(40);
           position: relative;
           border-radius: 50%;
 
           .icon {
             @include center-placement;
             color: $brand-faded-grey;
-            font-size: toRem(15);
+            font-size: toRem(17);
           }
 
           &:hover {
@@ -142,10 +158,16 @@ footer {
     }
 
     .footer-bottom {
-      @include flex-row-between-nowrap;
-      @include font-height(12.85, 18);
+      @include flex-row-nowrap("space-between", "center");
+      @include font-height(14, 18);
       color: rgba($brand-light-grey, 0.5);
       padding: toRem(27) 0;
+
+      @include breakpoint-down(sm) {
+        @include flex-column('flex-start', 'center'); 
+        @include font-height(14.25, 18);
+        gap: toRem(17);
+      }
     }
   }
 }
