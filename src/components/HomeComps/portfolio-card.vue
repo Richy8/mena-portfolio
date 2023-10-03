@@ -1,16 +1,22 @@
 <template>
   <div class="portfolio-card row">
     <!-- PROJECT IMAGE -->
-    <div class="col-12 col-md-6 col-lg-7">
-      <Tilt>
-        <div class="project-image">
-          <img :src="mxProjectImg(image)" alt="Image" class="w-100 h-auto" />
-        </div>
-      </Tilt>
+    <div class="col-12">
+      <div class="project-image">
+        <img :src="mxProjectImg(image)" alt="Image" class="w-100 h-auto" />
+
+        <!-- IMAGE OVERLAY -->
+        <div class="img-overlay w-100 h-100"></div>
+
+        <!-- VIEW BUTTON -->
+        <a :href="link" target="_blank" class="view-btn btn btn-grey"
+          >View Project</a
+        >
+      </div>
     </div>
 
     <!-- PROJECT DESCRIPTION -->
-    <div class="col-12 col-md-6 col-lg-5">
+    <div class="col-12">
       <div class="project-description">
         <router-link
           :to="{ name: 'ProjectDetail', params: { slug } }"
@@ -19,30 +25,35 @@
           {{ title }}
         </router-link>
 
-        <div class="stack-row" v-if="stacks.length">
+        <!-- <div class="stack-row" v-if="stacks.length">
           <div class="item-pill" v-for="(stack, index) in stacks" :key="index">
             {{ stack }}
           </div>
-        </div>
+        </div> -->
 
         <div class="description-text brand-faded-grey">
-          {{ description }}
+          {{ description.slice(0, 128) }}...
         </div>
 
-        <router-link to="" class="expand btn-grey">Read More</router-link>
+        <router-link
+          :to="{ name: 'ProjectDetail', params: { slug } }"
+          class="expand btn-grey"
+          >Read More</router-link
+        >
       </div>
     </div>
   </div>
 </template>
 
 <script setup>
-import Tilt from "vanilla-tilt-vue";
-
 defineProps({
   image: {
     type: String,
   },
   title: {
+    type: String,
+  },
+  link: {
     type: String,
   },
   slug: {
@@ -63,45 +74,57 @@ defineProps({
   @include flex-row-wrap("space-between", "center");
   font-family: "Eaves-SemiBold";
   margin-bottom: toRem(100);
+  @include transition(0.4s);
+  position: relative;
 
   &:last-of-type {
     margin-bottom: toRem(80);
   }
 
   .project-image {
-    border-radius: toRem(18);
+    margin-bottom: toRem(20);
+    border-radius: toRem(4);
+    position: relative;
     overflow: hidden;
-    width: 95%;
 
-    @include breakpoint-down(md) {
-      border-radius: toRem(10);
-      margin-bottom: toRem(40);
-      width: 100%;
+    .img-overlay {
+      @include center-placement;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .view-btn {
+      padding: toRem(12) toRem(26) !important;
+      background: $brand-dark-grey;
+      font-family: "Eaves-Heavy";
+      @include center-placement;
+      font-size: toRem(14);
+      color: $brand-white;
+      display: none;
+      z-index: 1;
+      transition: all 0.4s ease-in-out;
+    }
+
+    &:hover {
+      .img-overlay {
+        background: rgba(#000, 0.5);
+      }
+
+      .view-btn {
+        display: unset;
+      }
     }
   }
 
   .project-description {
     .title-text {
       display: inline-block;
-      @include font-height(38, 44);
+      @include font-height(21.75, 27);
       font-family: "Eaves-Bold";
-      margin-bottom: toRem(15);
+      margin-bottom: toRem(10);
       @include transition(0.3s);
 
-      @include breakpoint-down(xl) {
-        @include font-height(38, 42);
-      }
-
-      @include breakpoint-down(lg) {
-        @include font-height(34, 40);
-      }
-
-      @include breakpoint-down(sm) {
-        @include font-height(27, 35);
-      }
-
       @include breakpoint-down(xs) {
-        @include font-height(22, 30);
+        @include font-height(19.45, 26);
       }
 
       &:hover {
@@ -110,15 +133,11 @@ defineProps({
     }
 
     .description-text {
-      @include font-height(19, 28);
-      margin-bottom: toRem(18);
-
-      @include breakpoint-down(sm) {
-        @include font-height(18, 28);
-      }
+      @include font-height(17.75, 25);
+      margin-bottom: toRem(22);
 
       @include breakpoint-down(xs) {
-        @include font-height(17.45, 27);
+        @include font-height(17, 23);
       }
     }
 

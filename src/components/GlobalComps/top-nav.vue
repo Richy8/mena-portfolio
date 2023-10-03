@@ -12,20 +12,23 @@
           <router-link
             to="/home"
             class="list-item tab-view"
-            :class="{ 'active-link': $route.name === 'Home' }"
+            :class="{ 'active-link': $route.name === 'Home' && !$route.hash }"
             >Home</router-link
           >
-          <router-link
-            to="/about"
+          <a
+            href="#about"
             class="list-item tab-view"
-            :class="{ 'active-link': $route.name === 'About' }"
-            >About Me</router-link
+            :class="{ 'active-link': $route.hash === '#about' }"
+            >About Me</a
           >
-          <router-link
-            to="/projects"
+          <a
+            href="#projects"
             class="list-item tab-view"
-            :class="{ 'active-link': $route.name === 'Projects' }"
-            >Projects</router-link
+            :class="{
+              'active-link':
+                $route.hash === '#projects' || $route.name === 'ProjectDetail',
+            }"
+            >Projects</a
           >
           <!-- <router-link
             to="/blog"
@@ -33,11 +36,11 @@
             :class="{ 'active-link': $route.name === 'Blog' }"
             >Blog</router-link
           > -->
-          <router-link
-            to="/contact"
+          <a
+            href="#hire-me"
             class="list-item tab-view"
             :class="{ 'active-link': $route.name === 'Contact' }"
-            >Contact</router-link
+            >Contact</a
           >
 
           <a href="#hire-me" class="list-item btn-grey">Hire Me Today</a>
@@ -69,10 +72,17 @@ export default {
   },
 
   watch: {
-    $route(to) {
-      if (to.hash === "#hire-me") {
-        this.scrollToSection();
-      }
+    $route: {
+      handler(to) {
+        if (to.hash) {
+          if (to.name === "Home" && !to.hash) {
+            location.href = "/";
+          } else if (["Contact", "BookNow"].includes(to.name)) {
+            this.$router.push(`/${to.hash}`);
+          } else this.scrollToSection(to.hash);
+        }
+      },
+      immediate: true,
     },
   },
 
@@ -104,10 +114,8 @@ export default {
       this.$eventBus.emit("toggle-menu");
     },
 
-    gotoHireMe() {},
-
-    scrollToSection() {
-      const targetSection = document.querySelector("#hire-me");
+    scrollToSection(hash) {
+      const targetSection = document.querySelector(hash);
 
       if (targetSection) {
         window.scrollTo({

@@ -13,26 +13,26 @@ const routes = [
         name: "Home",
         component: home,
       },
-      {
-        path: "/about",
-        name: "About",
-        component: () => import("@/pages/about"),
-      },
-      {
-        path: "/blog",
-        name: "Blog",
-        component: () => import("@/pages/blog"),
-      },
-      {
-        path: "/blog/:slug",
-        name: "BlogDetail",
-        component: () => import("@/pages/blog-detail"),
-      },
-      {
-        path: "/projects",
-        name: "Projects",
-        component: () => import("@/pages/projects"),
-      },
+      // {
+      //   path: "/about",
+      //   name: "About",
+      //   component: () => import("@/pages/about"),
+      // },
+      // {
+      //   path: "/blog",
+      //   name: "Blog",
+      //   component: () => import("@/pages/blog"),
+      // },
+      // {
+      //   path: "/blog/:slug",
+      //   name: "BlogDetail",
+      //   component: () => import("@/pages/blog-detail"),
+      // },
+      // {
+      //   path: "/projects",
+      //   name: "Projects",
+      //   component: () => import("@/pages/projects"),
+      // },
       {
         path: "/project/:slug",
         name: "ProjectDetail",
@@ -55,10 +55,14 @@ const routes = [
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
   routes,
-  scrollBehavior() {
-    // return new Promise((resolve) => {
-    //   resolve({ left: 0, top: 0 });
-    // });
+  scrollBehavior(to, from, savedPosition) {
+    if (to.hash) {
+      return {
+        el: to.hash,
+        behavior: "smooth",
+      };
+    }
+
     return { top: 0, left: 0 };
   },
 });

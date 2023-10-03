@@ -18,8 +18,8 @@ export default {
 .header-bg-text {
   @include center-placement;
   width: max-content;
-  padding-left: 17.65%;
-  color: rgba($brand-light-black, 0.35);
+  padding-left: 14.5%;
+  color: rgba($brand-light-black, 0.5);
 
   @include breakpoint-down(lg) {
     padding-left: 14%;
@@ -29,18 +29,19 @@ export default {
     padding-left: 8%;
   }
 
-    @include breakpoint-down(md) {
-      display: none;
-    }
+  @include breakpoint-down(md) {
+    display: none;
+  }
 
   .line {
     position: relative;
-    font-size: toRem(260);
+    font-size: toRem(268);
     width: max-content;
     font-weight: 900;
+    letter-spacing: 0.04em;
 
     @include breakpoint-down(lg) {
-      font-size: toRem(245);  
+      font-size: toRem(245);
     }
 
     @include breakpoint-custom-down(940) {

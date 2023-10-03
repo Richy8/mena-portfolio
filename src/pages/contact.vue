@@ -8,7 +8,7 @@
         <!-- TITLE TEXT -->
         <div class="page-title-text brand-light-grey text-center">
           Collaborate to Innovate: <br />
-          <span class="brand-yellow">Your Ideas, Our Expertise</span>
+          <span class="brand-yellow">Your Ideas, My Expertise</span>
         </div>
 
         <!-- HELPER TEXT -->

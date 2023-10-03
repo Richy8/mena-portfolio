@@ -36,14 +36,14 @@ defineProps({
 <style lang="scss" scoped>
 .service-card {
   @include flex-column("flex-start", "flex-start");
-  color: $brand-white;
-  padding: toRem(24) toRem(20);
   border: toRem(1.25) solid rgba(255, 255, 255, 0.145);
   background: rgba(darken($brand-light-black, 2%), 0.35);
   box-shadow: 0 toRem(4) toRem(30) rgba(0, 0, 0, 0.1);
+  padding: toRem(24) toRem(20);
   backdrop-filter: blur(5px);
-  height: auto;
+  color: $brand-white;
   position: relative;
+  height: auto;
 
   @include breakpoint-down(md) {
     margin-bottom: toRem(50);

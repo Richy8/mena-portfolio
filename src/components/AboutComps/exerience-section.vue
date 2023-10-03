@@ -1,46 +1,17 @@
 <template>
   <div class="experience-section">
     <div class="container">
-      <div class="title-text brand-white">WORK HISTORY</div>
+      <div class="title-text">WORK HISTORY</div>
 
       <div class="row">
         <div class="col-12 col-md-10 col-xl-8 mx-auto">
           <!-- WORK TIMELINE -->
           <div class="work-timeline">
             <workDataCard
-              duration="SEPT 2022"
-              company="VESICASH"
-              role="SENIOR SOFTWARE LEAD ENGINEER"
-            />
-
-            <workDataCard
-              duration="OCT 2022"
-              company="PAVEHQ"
-              role="SENIOR SOFTWARE ENGINEER"
-            />
-
-            <workDataCard
-              duration="AUG 2022 - SEPT 2022"
-              company="MOTOCHECK"
-              role="FRONTEND ENGINEER"
-            />
-
-            <workDataCard
-              duration="MAY 2021 - AUG 2022"
-              company="CLASS54"
-              role="SENIOR SOFTWARE ENGINEER"
-            />
-
-            <workDataCard
-              duration="APR 2020 - JUN 2022"
-              company="GRADELY"
-              role="SENIOR FRONTEND LEAD ENGINEER"
-            />
-
-            <workDataCard
-              duration="JAN 2021 - MAY 2021"
-              company="ICLASS LMS"
-              role="FRONTEND DEVELOPER"
+              v-for="(work, index) in experienceList"
+              :key="index"
+              :workdata="work"
+              @workDataClicked="toggleWorkData"
             />
           </div>
         </div>
@@ -50,36 +21,41 @@
 </template>
 
 <script setup>
-import { defineAsyncComponent } from "vue";
+import { defineAsyncComponent, ref } from "vue";
+import experiences from "@/assets/experiences";
 
 const workDataCard = defineAsyncComponent(() =>
   import("@/components/AboutComps/work-data-card")
 );
+
+const experienceList = ref([...experiences]);
+
+const toggleWorkData = (selected_id) => {
+  experienceList.value.map((data) => (data.visible = false));
+  experienceList.value.find((data) => data.id === selected_id).visible = true;
+};
 </script>
 
 <style lang="scss" scoped>
 .experience-section {
-  padding: toRem(40) 0 toRem(120);
+  padding: toRem(80) 0 toRem(130);
 
   @include breakpoint-down(md) {
-    padding: toRem(120) 0 toRem(80);
+    padding: toRem(90) 0 toRem(100);
   }
 
   @include breakpoint-down(sm) {
-    padding: toRem(140) 0 toRem(40);
-  }
-
-  @include breakpoint-down(xs) {
-    padding: toRem(80) 0 toRem(5);
+    padding: toRem(70) 0 toRem(90);
   }
 
   .title-text {
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke-width: toRem(0.6);
     font-family: "Eaves-Heavy";
-    margin-bottom: toRem(60);
+    margin-bottom: toRem(40);
     letter-spacing: 0.018em;
-    font-size: toRem(120);
+    font-size: toRem(110);
+    color: $brand-white;
 
     @include breakpoint-down(xl) {
       font-size: toRem(100);
@@ -87,7 +63,7 @@ const workDataCard = defineAsyncComponent(() =>
 
     @include breakpoint-down(lg) {
       font-size: toRem(85);
-      margin-bottom: toRem(40);
+      margin-bottom: toRem(30);
     }
 
     @include breakpoint-down(md) {
@@ -95,11 +71,11 @@ const workDataCard = defineAsyncComponent(() =>
     }
 
     @include breakpoint-down(sm) {
-      font-size: toRem(46);
+      font-size: toRem(50);
     }
 
     @include breakpoint-down(xs) {
-      font-size: toRem(38);
+      font-size: toRem(40);
     }
   }
 
@@ -108,6 +84,10 @@ const workDataCard = defineAsyncComponent(() =>
     padding: toRem(5) 0;
     position: relative;
     height: auto;
+
+    @include breakpoint-down(sm) {
+      border-left: toRem(1) solid $brand-yellow;
+    }
   }
 
   .col-12 {

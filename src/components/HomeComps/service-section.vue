@@ -65,14 +65,14 @@ export default {
 <style lang="scss" scoped>
 .service-section {
   font-family: "Eaves-SemiBold";
-  padding: toRem(130) 0 toRem(80);
+  padding: toRem(130) 0 toRem(100);
 
   @include breakpoint-down(lg) {
     padding: toRem(120) 0 toRem(40);
   }
 
   @include breakpoint-down(sm) {
-    padding: toRem(60) 0 toRem(20);
+    padding: toRem(60) 0 toRem(30);
   }
 
   .container {

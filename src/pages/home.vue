@@ -15,6 +15,9 @@
     <!-- PORTFOLIO SECTION -->
     <portfolio-section />
 
+    <!-- EXPERIENCE SECTION -->
+    <experience-section />
+
     <!-- TESTIMONIAL SECTION -->
     <testimonial-section />
 
@@ -41,6 +44,9 @@ const serviceSection = defineAsyncComponent(() =>
 const portfolioSection = defineAsyncComponent(() =>
   import("@/components/HomeComps/portfolio-section")
 );
+const experienceSection = defineAsyncComponent(() =>
+  import("@/components/AboutComps/exerience-section")
+);
 const testimonialSection = defineAsyncComponent(() =>
   import("@/components/HomeComps/testimonial-section")
 );
@@ -57,6 +63,7 @@ export default {
     aboutSection,
     serviceSection,
     portfolioSection,
+    experienceSection,
     testimonialSection,
     blogSection,
     clientSection,

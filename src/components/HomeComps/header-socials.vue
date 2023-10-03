@@ -39,7 +39,7 @@ export default {
   }
 
   .header-socials {
-    @include center-y;  
+    @include center-y;
     right: toRem(2);
 
     @include breakpoint-down(xl) {
@@ -47,7 +47,7 @@ export default {
     }
 
     a {
-      @include font-height(13.5, 18);
+      @include font-height(15, 18);
       @include transition(0.4s);
       color: $brand-off-grey;
       margin: toRem(13) 0;

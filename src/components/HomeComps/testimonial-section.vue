@@ -2,7 +2,7 @@
   <div class="testimonial-section brand-light-grey">
     <div class="container">
       <div class="row wrapper">
-        <div class="col-12 col-md-5 col-xl-6">
+        <div class="copy-wrapper">
           <div class="copy-section">
             <!-- META TEXT -->
             <div class="page-meta-text">Client Testimonials</div>
@@ -24,37 +24,37 @@
           </div>
         </div>
 
-        <div class="col-12 col-md-7 col-xl-6">
+        <div class="testimonial-wrapper">
           <div class="testimonials">
             <div class="content-col">
               <testimonial-card
-                image="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1180&q=80"
-                name="Chris Southam"
-                description="Product lead at The SaaS People"
-                comment="Elvis's core strength is his ability to adapt and apply critical thinking to a problem. He doesn't just take a project and do it, he will break it down, check it ticks all the boxes (including the ones you forgot about!), and then deliver something beyond your expectations. Work with him without hesitation!"
+                image="https://media.licdn.com/dms/image/C4D03AQFkHUr1XheB4g/profile-displayphoto-shrink_100_100/0/1632600346229?e=1701907200&v=beta&t=uIk0bb028dUqfKSnvWaWZWhtfQfy_-KlelnX1E2yYa4"
+                name="Tomisin Olaofe"
+                description="Future Services Lead at Jaguar Land Rover"
+                comment="Elvis diligence and work-ethic is second to none. Elvis intelligence and dedication to his work comes off quite easily. However, it's his emotional intelligence that makes him a standout engineer to work with. His willingness to work with cross department teammates to help to clarify their issues and explain things in clear terms makes him easy to work with."
               />
 
               <testimonial-card
-                image="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2787&q=80"
-                name="Sara King"
-                description="CTO at The Variables"
-                comment="I always love working with Elvis - he’s professional and enthusiastic and always willing to provide insight and suggestions for improving accessibility and functionality of our project"
+                image="https://res.cloudinary.com/richy-jones/image/upload/v1696173743/segun.png"
+                name="Oluwasegun Ige"
+                description="Tech Lead at Budgit"
+                comment="Elvis is a great guy. He is very dedicated to his work! He delivers with excellence on his tasks. He interprets designs very well and also pays attention to little details without any supervision. He is a great team player and makes sure everyone on his team is fine."
               />
             </div>
 
             <div class="content-col">
               <testimonial-card
-                image="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1180&q=80"
-                name="Daniel Moore"
-                description="UI/UX Designer at Twitter"
-                comment="We loved working with Elvis and appreciate all his contributions to Pigeon Loans. If anyone is in the market for hiring a great freelance front-end developer, don’t hesitate to add Elvis to your team."
+                image="https://media.licdn.com/dms/image/D4D03AQEG9rmnWvmhhA/profile-displayphoto-shrink_400_400/0/1693991852870?e=1701907200&v=beta&t=HegoYN8KLfNqhoLieC-G9lokfWDEfGJAca1OjYReXKE"
+                name="Oluwaseyi Adelaju"
+                description="Growth Product Manager at SEAMFIX"
+                comment="Incredibly talented. Elvis is exceptionally dedicated to his work. During the period I worked with him, I noticed his eye for detail, teamwork spirit, and objectivity in every task assigned to him. He showed a great deal of determination in achieving set targets. Elvis is a valuable asset to any company he works with and above all an excellent colleague."
               />
 
               <testimonial-card
-                image="https://images.unsplash.com/photo-1628157588553-5eeea00af15c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1180&q=80"
-                name="Brian Tracy"
-                description="CEO at SquareSpace"
-                comment="Over the last few months I’ve had the pleasure to work with Elvis on the relaunch of our new marketing site. His attention to detail and flexibility to work with in our team’s style made him a delight to work with. Additionally, as an American it was awesome to wake up each day to a fresh package of improvements. To that end we are planning to employ Elvis to help us modernize our other two sites as well."
+                image="https://media.licdn.com/dms/image/C4E03AQHsTUxNYNdnsg/profile-displayphoto-shrink_400_400/0/1657287242023?e=1701907200&v=beta&t=yP1Gh7NG33-wt8tHud85cm_baL_51Yc77DibP0Vc_lg"
+                name="Imole Oluyemi"
+                description="Team Lead at Class54/Techhaven Africa"
+                comment="Elvis is an exceptional software engineering leader known for ensuring on-time delivery and top-notch quality. He excels in communication, understanding both technical and business aspects. Elvis's passion for excellent user experiences makes him an ideal collaborator for design-oriented organisations. At Class54, Elvis played a crucial role in enhancing user touchpoints. He consistently delivers high-quality software on time and comes highly recommended, never failing to impress."
               />
             </div>
           </div>
@@ -97,8 +97,28 @@ export default {
   .wrapper {
     @include flex-row-wrap("space-between", "center");
 
+    .copy-wrapper {
+      width: 44%;
+
+      @include breakpoint-down(md) {
+        width: 100%;
+      }
+    }
+
+    .testimonial-wrapper {
+      width: 56%;
+
+      @include breakpoint-down(md) {
+        width: 100%;
+      }
+    }
+
     .copy-section {
       width: 93%;
+
+      @include breakpoint-down(lg) {
+        width: 96%;
+      }
 
       .description-text {
         color: lighten($brand-faded-grey, 7%);

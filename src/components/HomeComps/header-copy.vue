@@ -33,10 +33,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-:root {
-  --text-color: hsl(0, 0%, 100%);
-}
-
 .header-copy {
   @include flex-column("flex-end", "flex-end");
 
@@ -48,7 +44,7 @@ export default {
 
   .copy-text-area {
     position: relative;
-    right: 13.75%;
+    right: 16.5%;
 
     @include breakpoint-custom-down(620) {
       right: unset;
@@ -58,7 +54,7 @@ export default {
     .copy {
       position: relative;
       color: $brand-white;
-      font-size: toRem(130);
+      font-size: toRem(135);
       font-weight: 700;
 
       @include breakpoint-down(xl) {
@@ -90,7 +86,7 @@ export default {
       }
 
       &-one {
-        top: toRem(37);
+        top: toRem(44);
 
         @include breakpoint-down(xl) {
           top: toRem(10);
@@ -154,7 +150,7 @@ export default {
       }
 
       &-three {
-        top: toRem(-60);
+        top: toRem(-80);
 
         @include breakpoint-down(xl) {
           top: toRem(-110);
@@ -268,7 +264,7 @@ export default {
     }
 
     .copy-description {
-      @include font-height(15.5, 24);
+      @include font-height(16, 25);
       position: absolute;
       text-align: right;
       bottom: toRem(24);

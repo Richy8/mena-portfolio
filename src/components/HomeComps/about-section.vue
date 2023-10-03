@@ -1,5 +1,5 @@
 <template>
-  <div class="about-section">
+  <div class="about-section" id="about">
     <div class="container">
       <section class="section section-left">
         <!-- META TEXT -->
@@ -38,12 +38,12 @@
           </p>
         </div>
 
-        <button class="btn btn-secondary">Meet Efemena Elvis</button>
+        <button class="btn btn-secondary">Preview Resume</button>
       </section>
 
       <section class="section section-right">
         <!-- QOUTE SECTION -->
-        <div class="soft-quote brand-white">
+        <div class="soft-quote">
           Software engineering is the art of transforming imagination into
           reality, where lines of code manifest into products that revolutionize
           industries, leveraging technical expertise to bridge the gap between
@@ -51,8 +51,11 @@
           landscape one line at a time.
         </div>
 
+        <!-- TOOLS SECTION -->
+        <tools-section />
+
         <!-- IMAGE SECTION -->
-        <div class="image-section">
+        <!-- <div class="image-section">
           <div class="image-frame image-frame-one">
             <div class="image-holder">
               <img
@@ -65,18 +68,24 @@
           <div class="image-frame image-frame-two">
             <div class="image-holder">
               <img
-                src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                src="https://cdn.pixabay.com/photo/2014/11/03/17/50/man-515518_1280.jpg"
                 alt=""
               />
             </div>
           </div>
-        </div>
+        </div> -->
       </section>
     </div>
   </div>
 </template>
 
-<script setup></script>
+<script setup>
+import { defineAsyncComponent } from "vue";
+
+const toolsSection = defineAsyncComponent(() =>
+  import("@/components/HomeComps/tools-section")
+);
+</script>
 
 <style lang="scss" scoped>
 .about-section {
@@ -162,8 +171,9 @@
         .soft-quote {
           border-left: toRem(3) solid $brand-yellow;
           @include font-height(18, 31);
-          margin-bottom: toRem(100);
+          margin-bottom: toRem(60);
           padding-left: toRem(16);
+          color: #d6d6d6;
 
           @include breakpoint-down(xl) {
             @include font-height(19, 29);
@@ -181,8 +191,9 @@
 
           @include breakpoint-down(xs) {
             border-left: toRem(1) solid $brand-yellow;
-            @include font-height(16, 28.5);
+            @include font-height(15.75, 28);
             padding-left: toRem(10);
+            margin-top: toRem(-15);
           }
         }
 
@@ -243,9 +254,11 @@
             .image-holder {
               background: $brand-dark-grey;
               @include center-placement;
+              border-radius: toRem(8);
               position: relative;
-              height: 94.5%;
-              width: 92.5%;
+              overflow: hidden;
+              height: 96%;
+              width: 94.755%;
 
               @include breakpoint-custom-down(520) {
                 width: 94.5%;

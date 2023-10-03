@@ -78,8 +78,9 @@ defineProps({
   }
 
   .bottom-area {
-    @include font-height(17.25, 26);
+    @include font-height(17.25, 25);
     font-family: "Eaves-SemiBold";
+    // @include line-clamp(6);
   }
 }
 </style>

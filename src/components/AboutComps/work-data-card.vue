@@ -1,28 +1,44 @@
 <template>
   <div class="work-data">
-    <div class="work-duration">{{ duration }}</div>
-    <div class="work-title">{{ company }}</div>
-    <div class="work-role">{{ role }}</div>
+    <div class="d-flex justify-content-between align-items-center">
+      <div @click="$emit('workDataClicked', workdata.id)">
+        <div class="work-duration">{{ workdata.duration }}</div>
+        <div class="work-title smooth-transition" title="Click to toggle tasks">
+          {{ workdata.company }}
+        </div>
+        <div class="work-role">{{ workdata.role }}</div>
+      </div>
+
+      <!-- <div class="toggler rounded-circle pointer">
+        <div class="icon icon-caret-down"></div>
+      </div> -->
+    </div>
+
+    <ul
+      class="brand-faded-grey task-list smooth-animation"
+      v-if="workdata.visible"
+    >
+      <li v-for="(task, index) in workdata.responsibilities" :key="index">
+        {{ task }}
+      </li>
+    </ul>
   </div>
 </template>
 
 <script setup>
+defineEmits(["workDataClicked"]);
+
 defineProps({
-  duration: {
-    type: String,
-  },
-  company: {
-    type: String,
-  },
-  role: {
-    type: String,
+  workdata: {
+    type: Object,
+    default: () => ({}),
   },
 });
 </script>
 
 <style lang="scss" scoped>
 .work-data {
-  margin-bottom: toRem(50);
+  margin-bottom: toRem(40);
   padding-left: toRem(50);
   position: relative;
 
@@ -67,7 +83,7 @@ defineProps({
   }
 
   .work-duration {
-    @include font-height(14, 24);
+    @include font-height(13, 24);
     margin-bottom: toRem(2);
     color: $brand-yellow;
 
@@ -83,10 +99,10 @@ defineProps({
   .work-title {
     color: $brand-off-grey;
     font-family: "Eaves-Heavy";
-    @include font-height(40, 38);
+    @include font-height(34, 38);
 
-    @include breakpoint-down(xl) {
-      @include font-height(36, 38);
+    &:hover {
+      color: $brand-yellow;
     }
 
     @include breakpoint-down(lg) {
@@ -102,7 +118,7 @@ defineProps({
     }
 
     @include breakpoint-down(xs) {
-      @include font-height(22, 26);
+      @include font-height(21.5, 26);
       margin-bottom: toRem(5);
     }
   }
@@ -110,18 +126,10 @@ defineProps({
   .work-role {
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke-width: toRem(0.6);
-    @include font-height(40, 38);
+    @include font-height(30, 38);
     font-family: "Eaves-Heavy";
-    color: $brand-faded-grey;
+    color: $brand-off-grey;
     letter-spacing: 0.018em;
-
-    @include breakpoint-down(xl) {
-      @include font-height(36, 38);
-    }
-
-    @include breakpoint-down(lg) {
-      @include font-height(32, 34);
-    }
 
     @include breakpoint-down(md) {
       @include font-height(28, 32);
@@ -132,7 +140,49 @@ defineProps({
     }
 
     @include breakpoint-down(xs) {
-      @include font-height(22, 26);
+      @include font-height(21, 26);
+    }
+  }
+
+  .toggler {
+    border: toRem(1) solid rgba($brand-faded-grey, 0.5);
+    @include square-shape(38);
+    @include transition(0.3s);
+    position: relative;
+
+    .icon {
+      color: rgba($brand-faded-grey, 0.5);
+      @include center-placement;
+      font-size: toRem(16);
+    }
+
+    &:hover {
+      background: rgba($brand-yellow, 0.15);
+    }
+  }
+
+  .task-list {
+    margin-top: toRem(15);
+
+    @include breakpoint-down(xs) {
+      padding-left: toRem(15);
+    }
+
+    li {
+      @include font-height(16.5, 26);
+      margin-bottom: toRem(15);
+
+      @include breakpoint-down(lg) {
+        @include font-height(15.75, 25);
+      }
+
+      @include breakpoint-down(xs) {
+        @include font-height(15.5, 24.5);
+      }
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
     }
   }
 }

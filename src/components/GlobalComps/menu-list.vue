@@ -5,15 +5,15 @@
       <div class="menu-text">HOME</div>
     </router-link>
 
-    <router-link to="/about" class="menu-item">
+    <a href="#about" class="menu-item">
       <div class="menu-count">02</div>
       <div class="menu-text">ABOUT ME</div>
-    </router-link>
+    </a>
 
-    <router-link to="/projects" class="menu-item">
+    <a href="#projects" class="menu-item">
       <div class="menu-count">03</div>
       <div class="menu-text">PROJECTS</div>
-    </router-link>
+    </a>
 
     <!-- <router-link to="#" class="menu-item">
       <div class="menu-count">04</div>
@@ -38,9 +38,31 @@ export default {
 
   watch: {
     $route: {
-      handler() {
+      handler(to) {
+        if (to.hash) {
+          if (to.name === "Home" && !to.hash) {
+            location.href = "/";
+          } else if (["Contact", "BookNow"].includes(to.name)) {
+            this.$router.push(`/${to.hash}`);
+          } else this.scrollToSection(to.hash);
+        }
+
         this.$eventBus.emit("close-menu");
       },
+      immediate: true,
+    },
+  },
+
+  methods: {
+    scrollToSection(hash) {
+      const targetSection = document.querySelector(hash);
+
+      if (targetSection) {
+        window.scrollTo({
+          top: targetSection.offsetTop,
+          behavior: "smooth",
+        });
+      }
     },
   },
 };
@@ -94,7 +116,7 @@ export default {
       -webkit-text-stroke-width: toRem(0.6);
 
       @include breakpoint-down(xs) {
-        @include font-height(35, 40);
+        @include font-height(33, 40);
       }
     }
 

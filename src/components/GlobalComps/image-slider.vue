@@ -10,11 +10,11 @@
     </div>
 
     <button @click="prevSlide" class="prev-btn">
-        <div class="icon icon-caret-left"></div>
+      <div class="icon icon-caret-left"></div>
     </button>
 
     <button @click="nextSlide" class="next-btn">
-        <div class="icon icon-caret-right"></div>
+      <div class="icon icon-caret-right"></div>
     </button>
   </div>
 </template>
@@ -48,6 +48,10 @@ const currentSlide = computed(() => slides.value[currentIndex.value]);
   border: toRem(6) solid $brand-light-grey;
   position: relative;
 
+  @include breakpoint-down(sm) {
+    border: toRem(3) solid $brand-light-grey;
+  }
+
   .slides {
     display: flex;
     transition: transform 0.5s;
@@ -64,21 +68,33 @@ const currentSlide = computed(() => slides.value[currentIndex.value]);
 
   .prev-btn,
   .next-btn {
-    @include flex-column('center', 'center');
+    @include flex-column("center", "center");
     background-color: $brand-light-black;
     color: $brand-white;
     padding: toRem(10);
     border-radius: 50%;
     @include center-y;
     cursor: pointer;
+
+    @include breakpoint-down(sm) {
+      font-size: toRem(12);
+    }
   }
 
   .prev-btn {
     left: toRem(10);
+
+    @include breakpoint-down(sm) {
+      left: toRem(4);
+    }
   }
 
   .next-btn {
     right: toRem(10);
+
+    @include breakpoint-down(sm) {
+      right: toRem(4);
+    }
   }
 }
 </style>

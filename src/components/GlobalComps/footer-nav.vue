@@ -6,6 +6,17 @@
         <div class="top-left">
           <!-- LOGO IMAGE -->
           <BrandLogo :has_index="false" />
+
+          <!-- CONTACT INFO -->
+          <div class="contact-info">
+            <a href="mailto:menaelvisjones@gmail.com">
+              <span class="icon icon-email"></span> menaelvisjones@gmail.com
+            </a>
+
+            <a href="tel:+2348131177703"
+              ><span class="icon icon-phone"></span> +2348131177703</a
+            >
+          </div>
         </div>
 
         <div class="top-right">
@@ -82,24 +93,43 @@ footer {
       padding: toRem(27) 0;
 
       @include breakpoint-down(sm) {
-        @include flex-column('flex-start', 'center'); 
+        @include flex-column("flex-start", "center");
         gap: toRem(30);
       }
 
       .top-left {
-        @include flex-row-nowrap("flex-start", "center");
-
-        .logo-img {
-          @include rectangle-shape(57, 37);
+        @include breakpoint-down(sm) {
+          @include flex-column("flex-start", "center");
         }
 
-        .brand-name {
-          color: rgba($brand-light-grey, 0.875);
-          margin-left: toRem(20);
-          font-size: toRem(18);
-          position: relative;
-          font-weight: 700;
-          top: toRem(9);
+        .contact-info {
+          @include flex-column("flex-start", "flex-start");
+          margin-top: toRem(12);
+
+          @include breakpoint-down(sm) {
+            @include flex-column("flex-start", "center");
+          }
+
+          a {
+            @include font-height(15.5, 18);
+            margin-bottom: toRem(6);
+            color: $brand-faded-grey;
+            display: inline-block;
+
+            &:hover {
+              color: $brand-yellow;
+            }
+
+            &:last-of-type {
+              margin-bottom: 0;
+            }
+
+            .icon {
+              margin-right: toRem(6);
+              position: relative;
+              top: toRem(3);
+            }
+          }
         }
       }
 
@@ -164,7 +194,7 @@ footer {
       padding: toRem(27) 0;
 
       @include breakpoint-down(sm) {
-        @include flex-column('flex-start', 'center'); 
+        @include flex-column("flex-start", "center");
         @include font-height(14.25, 18);
         gap: toRem(17);
       }

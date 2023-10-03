@@ -7,6 +7,10 @@ const MixinAssets = {
     mxProjectImg(src) {
       return require(`@/assets/static/projects/${src}`);
     },
+
+    mxStackImg(src) {
+      return require(`@/assets/static/stacks/${src}`);
+    },
   },
 };
 
