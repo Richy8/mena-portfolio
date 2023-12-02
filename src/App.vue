@@ -1,30 +1,55 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view/>
+  <div id="app">
+    <router-view v-slot="{ Component }">
+      <transition name="fade">
+        <component :is="Component" />
+      </transition>
+    </router-view>
+
+    <!-- MENU ITEMS CONTAINER -->
+    <menu-area />
+
+    <!-- CURSOR STATE -->
+    <cursor-state />
+  </div>
 </template>
 
+<script>
+import cursorState from "@/components/GlobalComps/cursor-state";
+import MenuArea from "@/components/GlobalComps/menu-area";
+
+export default {
+  name: "app",
+
+  components: {
+    cursorState,
+    MenuArea,
+  },
+
+  mounted() {
+    this.$color.setPageBackgroundColor("#1A1A1A");
+  },
+};
+</script>
+
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+body {
+  cursor: none;
+  scroll-behavior: smooth;
+
+  @include breakpoint-down(sm) {
+    cursor: unset;
+  }
 }
 
-nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
+.fade-enter {
+  opacity: 0;
+}
+.fade-enter-active {
+  transition: opacity 0.225s ease;
+}
+.fade-leave-active {
+  transition: opacity 0.225s ease;
+  opacity: 0;
 }
 </style>

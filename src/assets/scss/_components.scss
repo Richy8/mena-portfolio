@@ -1,0 +1,85 @@
+.page-meta-text {
+  font-size: toRem(16);
+  margin-bottom: toRem(10);
+  padding: toRem(6) toRem(16) toRem(5);
+  border-radius: toRem(20);
+  background: rgba($brand-yellow, 0.125);
+  font-family: "Eaves-SemiBold";
+  width: max-content;
+  color: rgba($brand-light-grey, 0.8) !important;
+
+  @include breakpoint-down(xl) {
+    margin-bottom: toRem(15);
+  }
+}
+
+.page-title-text {
+  @include font-height(52, 56);
+  font-family: "Eaves-Heavy";
+  margin-bottom: toRem(28);
+
+  @include breakpoint-down(lg) {
+    @include font-height(48, 54);
+  }
+
+  @include breakpoint-down(md) {
+    @include font-height(42, 52);
+  }
+
+  @include breakpoint-down(sm) {
+    @include font-height(40, 48);
+  }
+
+  @include breakpoint-down(xs) {
+    @include font-height(32, 40);
+  }
+}
+
+.helper-text {
+  @include font-height(20, 29);
+  margin-bottom: toRem(70);
+  width: 48%;
+  color: lighten($brand-faded-grey, 6%);
+
+  @include breakpoint-down(lg) {
+    @include font-height(20.25, 30);
+  }
+
+  @include breakpoint-down(sm) {
+    @include font-height(20, 28);
+  }
+
+  @include breakpoint-down(xs) {
+    @include font-height(18, 28);
+  }
+}
+
+.btn-grey {
+  background: rgba($brand-light-black, 0.85);
+  padding: toRem(11) toRem(26) !important;
+  @include transition(0.4s);
+  border-radius: toRem(8);
+  color: $brand-off-grey;
+  width: max-content;
+
+  &:hover,
+  &:focus {
+    background-color: $brand-yellow !important;
+    color: $brand-sharp-grey !important;
+  }
+}
+
+.stack-row {
+  @include flex-row-wrap("flex-start", "center");
+  font-family: "Eaves-Bold";
+  margin-bottom: toRem(30);
+  gap: toRem(13) toRem(8);
+
+  .item-pill {
+    background: rgba($brand-yellow, 0.9);
+    color: $brand-black;
+    @include font-height(14, 16);
+    padding: toRem(5) toRem(12);
+    border-radius: toRem(12);
+  }
+}

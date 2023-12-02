@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@400;500;600;700;800&display=swap");
+
+@font-face {
+  font-family: "Poppins";
+  src: local(Poppins);
+}
+
+@font-face {
+  font-family: "Inter";
+  src: local(Inter);
+}
+
+@font-face {
+  font-family: "Pacifico";
+  src: local(Pacifico);
+}
+
+@font-face {
+  font-family: "Merriweather Sans", sans-serif;
+  src: local(Merriweather Sans);
+}
+
+@font-face {
+  font-family: "Eaves-Light";
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/MrEavesXLModOT-Light.ttf");
+}
+
+@font-face {
+  font-family: "Eaves-Regular";
+  font-weight: 500;
+  font-display: swap;
+  src: url("../fonts/MrEavesXLModOT-Reg.ttf");
+}
+@font-face {
+  font-family: "Eaves-Regular";
+  font-weight: 500;
+  font-display: swap;
+  src: url("../fonts/MrEavesXLModOT-Reg.ttf");
+}
+@font-face {
+  font-family: "Eaves-Regular";
+  font-weight: 500;
+  font-display: swap;
+  src: url("../fonts/MrEavesXLModOT-Reg.ttf");
+}
+
+@font-face {
+  font-family: "Eaves-SemiBold";
+  font-weight: 600;
+  font-display: swap;
+  src: url("../fonts/MrEavesXLModOT-Book.ttf");
+}
+
+@font-face {
+  font-family: "Eaves-Bold";
+  font-weight: 700;
+  font-display: swap;
+  src: url("../fonts/MrEavesXLModOT-Bold.ttf");
+}
+
+@font-face {
+  font-family: "Eaves-Heavy";
+  font-weight: 800;
+  font-display: swap;
+  src: url("../fonts/MrEavesXLModOT-Heavy.ttf");
+}
+
+$header_font: "Poppins", Roboto, Segoe UI, Open Sans, sans-serif;
+
+$body_font: "Inter", Roboto, Segoe UI, Open Sans, sans-serif;
+
+$style_font: "Pacifico", Cursive;
+
+body {
+  //   font-family: $body_font;
+  font-display: fallback;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $header_font;
+  font-display: fallback;
+}
+
+.stylish-font {
+  font-family: $style_font;
+}
+
+.eaves-semibold {
+  font-family: "Eaves-SemiBold";
+}
+
+.eaves-bold {
+  font-family: "Eaves-Bold";
+}
+
+.eaves-heavy {
+  font-family: "Eaves-Heavy";
+}

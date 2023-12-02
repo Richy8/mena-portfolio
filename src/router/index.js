@@ -1,25 +1,70 @@
-import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
+import { createRouter, createWebHistory } from "vue-router";
+import baseLayout from "@/layouts/base-layout";
+import home from "@/pages/home-page";
 
 const routes = [
   {
-    path: '/',
-    name: 'home',
-    component: HomeView
+    path: "/",
+    alias: "/home",
+    component: baseLayout,
+    children: [
+      {
+        path: "",
+        name: "Home",
+        component: home,
+      },
+      // {
+      //   path: "/about",
+      //   name: "About",
+      //   component: () => import("@/pages/about-page"),
+      // },
+      // {
+      //   path: "/blog",
+      //   name: "Blog",
+      //   component: () => import("@/pages/blog-page"),
+      // },
+      // {
+      //   path: "/blog/:slug",
+      //   name: "BlogDetail",
+      //   component: () => import("@/pages/blog-detail"),
+      // },
+      // {
+      //   path: "/projects",
+      //   name: "Projects",
+      //   component: () => import("@/pages/projects-page"),
+      // },
+      {
+        path: "/project/:slug",
+        name: "ProjectDetail",
+        component: () => import("@/pages/project-detail"),
+      },
+      {
+        path: "/contact",
+        name: "Contact",
+        component: () => import("@/pages/contact-page"),
+      },
+      {
+        path: "/schedule-session",
+        name: "BookNow",
+        component: () => import("@/pages/booknow-page"),
+      },
+    ],
   },
-  {
-    path: '/about',
-    name: 'about',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
-  }
-]
+];
 
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
-  routes
-})
+  routes,
+  scrollBehavior(to) {
+    if (to.hash) {
+      return {
+        el: to.hash,
+        behavior: "smooth",
+      };
+    }
 
-export default router
+    return { top: 0, left: 0 };
+  },
+});
+
+export default router;
