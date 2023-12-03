@@ -12,6 +12,7 @@
           <a
             href="/home"
             class="list-item tab-view"
+            aria-label="Home"
             :class="{ 'active-link': $route.name === 'Home' && !$route.hash }"
             >Home</a
           >
@@ -19,12 +20,14 @@
             @click="routeToSection('about')"
             href="javascript:void(0)"
             class="list-item tab-view"
+            aria-label="About Me"
             :class="{ 'active-link': $route.hash === '#about' }"
             >About Me</a
           >
           <a
             @click="routeToSection('projects')"
             href="javascript:void(0)"
+            aria-label="Projects"
             class="list-item tab-view"
             :class="{
               'active-link':
@@ -32,27 +35,37 @@
             }"
             >Projects</a
           >
-          <!-- <router-link
-            to="/blog"
-            class="list-item tab-view"
-            :class="{ 'active-link': $route.name === 'Blog' }"
-            >Blog</router-link
-          > -->
           <a
             href="#hire-me"
             class="list-item tab-view"
+            aria-label="Contact"
             :class="{ 'active-link': $route.name === 'Contact' }"
             >Contact</a
           >
 
-          <a href="#hire-me" class="list-item btn-grey">Hire Me Today</a>
+          <a
+            href="#hire-me"
+            aria-label="Hire Me Today"
+            class="list-item btn-grey"
+            >Hire Me Today</a
+          >
         </div>
 
         <!-- MOBILE MENU SECTION -->
         <div class="mobile-wrapper">
-          <a href="#hire-me" class="list-item btn-grey">Hire Me Today</a>
+          <a
+            href="#hire-me"
+            class="list-item btn-grey"
+            aria-label="Hire Me Today"
+            >Hire Me Today</a
+          >
 
-          <div class="mobile-menu pointer" ref="menuPane" @click="toggleMenu">
+          <div
+            class="mobile-menu pointer"
+            aria-label="Menu icon"
+            ref="menuPane"
+            @click="toggleMenu"
+          >
             <div class="line line-one"></div>
             <div class="line line-two"></div>
             <div class="line line-three"></div>

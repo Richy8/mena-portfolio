@@ -1,12 +1,10 @@
 <template>
   <div class="header-bg-text position-absolute w-100 h-auto container">
-    <div data-aos="fade-right" data-aos-delay="100" data-aos-duration="1500">
-      <!-- LINE ONE -->
-      <h1 class="line line-one select-none">DEVE</h1>
+    <!-- LINE ONE -->
+    <h1 class="line line-one select-none">DEVE</h1>
 
-      <!-- LINE TWO -->
-      <h1 class="line line-two select-none">LOPER</h1>
-    </div>
+    <!-- LINE TWO -->
+    <h1 class="line line-two select-none">LOPER</h1>
   </div>
 </template>
 
@@ -22,7 +20,7 @@ export default {
   @include center-placement;
   width: max-content;
   padding-left: 14.5%;
-  color: rgba($brand-light-black, 0.5);
+  color: rgba($brand-light-black, 0.65);
 
   @include breakpoint-down(lg) {
     padding-left: 14%;

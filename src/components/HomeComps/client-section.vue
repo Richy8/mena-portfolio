@@ -2,21 +2,22 @@
   <div class="client-section">
     <div class="container">
       <!-- META TEXT -->
-      <div class="page-meta-text">ESTEEMED CLIENTS</div>
+      <h2 class="page-meta-text">ESTEEMED CLIENTS</h2>
 
       <!-- TITLE TEXT -->
-      <div class="page-title-text brand-light-grey text-center">
+      <h2 class="page-title-text brand-light-grey text-center">
         Meet my
         <span class="brand-yellow">Exceptional Clients</span>
-      </div>
+      </h2>
 
       <div class="row client-row brand-light-grey">
         <div class="col-6 col-md-4 col-lg-3">
           <div class="client-img">
             <img
-              :src="mxStaticImg('client-gradely.svg')"
+              src="https://res.cloudinary.com/richy-jones/image/upload/q_60/v1701596425/client-gradely.svg"
               class="filter-bw"
               alt="Gradely client"
+              loading="lazy"
             />
           </div>
         </div>
@@ -24,9 +25,10 @@
         <div class="col-6 col-md-4 col-lg-3">
           <div class="client-img">
             <img
-              :src="mxStaticImg('client-vesicash.svg')"
+              src="https://res.cloudinary.com/richy-jones/image/upload/q_60/v1701596426/client-vesicash.svg"
               class="filter-contrast"
               alt="Vesicash client"
+              loading="lazy"
             />
           </div>
         </div>
@@ -34,9 +36,10 @@
         <div class="col-6 col-md-4 col-lg-3">
           <div class="client-img">
             <img
-              :src="mxStaticImg('client-pave.svg')"
+              src="https://res.cloudinary.com/richy-jones/image/upload/q_60/v1701596427/client-pave.svg"
               class="filter-contrast"
               alt="PaveHq client"
+              loading="lazy"
             />
           </div>
         </div>
@@ -44,9 +47,10 @@
         <div class="col-6 col-md-4 col-lg-3">
           <div class="client-img">
             <img
-              :src="mxStaticImg('client-class54.svg')"
+              src="https://res.cloudinary.com/richy-jones/image/upload/q_60/v1701596425/client-class54.svg"
               class="filter-contrast"
               alt="Class54 client"
+              loading="lazy"
             />
           </div>
         </div>
@@ -54,9 +58,10 @@
         <div class="col-6 col-md-4 col-lg-3">
           <div class="client-img">
             <img
-              :src="mxStaticImg('client-budgit.svg')"
+              src="https://res.cloudinary.com/richy-jones/image/upload/q_60/v1701596425/client-budgit.svg"
               class="filter-contrast"
               alt="Budgit client"
+              loading="lazy"
             />
           </div>
         </div>
@@ -64,21 +69,23 @@
         <div class="col-6 col-md-4 col-lg-3">
           <div class="client-img">
             <img
-              :src="mxStaticImg('client-golden-penny.png')"
+              src="https://res.cloudinary.com/richy-jones/image/upload/q_60/v1701596425/client-golden-penny.png"
               class="gp-img filter-contrast"
               alt="GoldenPenny client"
+              loading="lazy"
             />
           </div>
         </div>
 
-        <!-- <div class="col-6 col-md-4 col-lg-3">
+        <div class="col-6 col-md-4 col-lg-3">
           <div class="client-img">
             <img
-              :src="mxStaticImg('client-deskangle.svg')"
+              src="https://res.cloudinary.com/richy-jones/image/upload/q_60/v1701596426/client-deskangle.svg"
               alt="Deskangle client"
+              loading="lazy"
             />
           </div>
-        </div> -->
+        </div>
       </div>
     </div>
   </div>
@@ -130,22 +137,6 @@
       }
     }
 
-    .helper-text {
-      width: 50%;
-
-      @include breakpoint-down(lg) {
-        width: 80%;
-      }
-
-      @include breakpoint-down(md) {
-        width: 95%;
-      }
-
-      @include breakpoint-down(sm) {
-        width: 100%;
-      }
-    }
-
     .client-row {
       @include flex-row-wrap("center", "center");
       width: 85%;
@@ -163,6 +154,7 @@
 
       .client-img {
         position: relative;
+        @include flex-row-nowrap("center", "center");
         padding: 0 toRem(25) toRem(10);
 
         @include breakpoint-down(lg) {
@@ -171,7 +163,6 @@
 
         @include breakpoint-down(md) {
           padding: 0 toRem(25) toRem(50);
-          @include flex-row-nowrap("center", "center");
         }
 
         @include breakpoint-down(sm) {

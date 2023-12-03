@@ -1,103 +1,183 @@
 <template>
   <div class="tools-section">
     <!-- META TEXT -->
-    <div class="page-meta-text">COMMONLY USED TECHNOLOGIES</div>
+    <h2 class="page-meta-text">COMMONLY USED TECHNOLOGIES</h2>
 
     <div class="toolset">
-      <div class="toolset-title">Languages, Frameworks & Databases</div>
+      <h2 class="toolset-title">Languages, Frameworks & Databases</h2>
       <div class="tool-wrapper">
         <div class="tool-pill">
-          <img :src="mxStackImg('python.png')" alt="python" />
+          <img
+            :src="mxStackImg('python.png')"
+            alt="python"
+            width="20"
+            height="20"
+          />
           <div class="text">Python</div>
         </div>
 
         <div class="tool-pill">
-          <img :src="mxStackImg('typescript.png')" alt="typescript" />
+          <img
+            :src="mxStackImg('typescript.png')"
+            alt="typescript"
+            width="20"
+            height="20"
+          />
           <div class="text">Typescript</div>
         </div>
 
         <div class="tool-pill">
-          <img :src="mxStackImg('php.png')" alt="php" />
+          <img :src="mxStackImg('php.png')" alt="php" width="20" height="20" />
           <div class="text">PHP</div>
         </div>
 
         <div class="tool-pill">
-          <img :src="mxStackImg('nodejs.png')" alt="nodejs" />
+          <img
+            :src="mxStackImg('nodejs.png')"
+            alt="nodejs"
+            width="20"
+            height="20"
+          />
           <div class="text">Node Js</div>
         </div>
 
         <div class="tool-pill">
-          <img :src="mxStackImg('vuejs.png')" alt="vuejs" />
+          <img
+            :src="mxStackImg('vuejs.png')"
+            alt="vuejs"
+            width="20"
+            height="20"
+          />
           <div>Vue Js</div>
         </div>
 
         <div class="tool-pill">
-          <img :src="mxStackImg('reactjs.png')" alt="reactjs" />
+          <img
+            :src="mxStackImg('reactjs.png')"
+            alt="reactjs"
+            width="20"
+            height="20"
+          />
           <div>React Js</div>
         </div>
 
         <div class="tool-pill">
-          <img :src="mxStackImg('reactjs.png')" alt="reactnative" />
+          <img
+            :src="mxStackImg('reactjs.png')"
+            alt="reactnative"
+            width="20"
+            height="20"
+          />
           <div>React Native</div>
         </div>
 
         <div class="tool-pill">
-          <img :src="mxStackImg('angular.png')" alt="angular" />
+          <img
+            :src="mxStackImg('angular.png')"
+            alt="angular"
+            width="20"
+            height="20"
+          />
           <div>Angular</div>
         </div>
 
         <div class="tool-pill">
-          <img :src="mxStackImg('graphql.png')" alt="graphql" />
+          <img
+            :src="mxStackImg('graphql.png')"
+            alt="graphql"
+            width="20"
+            height="20"
+          />
           <div>GraphQl</div>
         </div>
 
         <div class="tool-pill">
-          <img :src="mxStackImg('mysql.png')" alt="mysql" />
+          <img
+            :src="mxStackImg('mysql.png')"
+            alt="mysql"
+            width="20"
+            height="20"
+          />
           <div>MySQL</div>
         </div>
 
         <div class="tool-pill">
-          <img :src="mxStackImg('postgresql.png')" alt="postgresql" />
+          <img
+            :src="mxStackImg('postgresql.png')"
+            alt="postgresql"
+            width="20"
+            height="20"
+          />
           <div>PostgreSQL</div>
         </div>
 
         <div class="tool-pill">
-          <img :src="mxStackImg('mongodb.png')" alt="mongodb" />
+          <img
+            :src="mxStackImg('mongodb.png')"
+            alt="mongodb"
+            width="20"
+            height="20"
+          />
           <div>MongoDB</div>
         </div>
       </div>
     </div>
 
     <div class="toolset">
-      <div class="toolset-title">Other Tools</div>
+      <h2 class="toolset-title">Other Tools</h2>
       <div class="tool-wrapper">
         <div class="tool-pill">
-          <img :src="mxStackImg('figma.png')" alt="figma" />
+          <img
+            :src="mxStackImg('figma.png')"
+            alt="figma"
+            width="20"
+            height="20"
+          />
           <div>Figma</div>
         </div>
 
         <div class="tool-pill">
-          <img :src="mxStackImg('photoshop.png')" alt="photoshop" />
+          <img
+            :src="mxStackImg('photoshop.png')"
+            alt="photoshop"
+            width="20"
+            height="20"
+          />
           <div>Photoshop</div>
         </div>
 
         <div class="tool-pill">
-          <img :src="mxStackImg('postman.png')" alt="postman" />
+          <img
+            :src="mxStackImg('postman.png')"
+            alt="postman"
+            width="20"
+            height="20"
+          />
           <div>Postman</div>
         </div>
 
         <div class="tool-pill">
-          <img :src="mxStackImg('git.png')" alt="git" />
+          <img :src="mxStackImg('git.png')" alt="git" width="20" height="20" />
           <div>Git VCS</div>
         </div>
 
         <div class="tool-pill">
-          <img :src="mxStackImg('docker.png')" alt="docker" />
+          <img
+            :src="mxStackImg('docker.png')"
+            alt="docker"
+            width="20"
+            height="20"
+          />
           <div>Docker</div>
         </div>
 
         <div class="tool-pill">
-          <img :src="mxStackImg('redis.png')" alt="redis" />
+          <img
+            :src="mxStackImg('redis.png')"
+            alt="redis"
+            width="20"
+            height="20"
+          />
           <div>Redis</div>
         </div>
       </div>
@@ -189,8 +269,7 @@
 
         img {
           margin: 0 toRem(4) 0 toRem(-3);
-          height: auto;
-          width: 20px;
+          @include square-shape(20);
         }
 
         .text {

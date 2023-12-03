@@ -1,48 +1,19 @@
 <template>
   <div class="header-copy">
     <div class="copy-text-area select-none">
-      <div
-        class="copy copy-one"
-        data-aos="fade-left"
-        data-aos-delay="150"
-        data-aos-duration="1300"
-      >
-        Hello<span class="brand-yellow">.</span>
-      </div>
+      <div class="copy copy-one">Hello<span class="brand-yellow">.</span></div>
 
-      <div
-        class="copy copy-two"
-        data-aos="fade-left"
-        data-aos-delay="150"
-        data-aos-duration="1600"
-      >
-        I am
-      </div>
+      <div class="copy copy-two">I am</div>
 
-      <div
-        class="copy copy-three"
-        data-aos="fade-left"
-        data-aos-delay="150"
-        data-aos-duration="1900"
-      >
+      <div class="copy copy-three">
         <div class="wrapper">
           <div class="top">Efemena</div>
           <div class="bottom" aria-hidden="true">Efemena</div>
         </div>
-
-        <!-- LOVE -->
-        <!-- <div class="love">
-          <div class="heart position-relative pulse-animate"></div>
-        </div> -->
       </div>
 
       <!-- COPY DESCRIPTION -->
-      <div
-        class="copy-description brand-off-grey"
-        data-aos="fade-left"
-        data-aos-delay="300"
-        data-aos-duration="2000"
-      >
+      <div class="copy-description brand-off-grey">
         A passionate software engineer,<br />
         building exceptional digital experience<br />
         and creating human-centered products.
@@ -225,65 +196,6 @@ export default {
           background-clip: text;
           -webkit-background-clip: text;
           transform: translateX(-2.16px) translateY(-0.5px);
-        }
-      }
-    }
-
-    .love {
-      position: absolute;
-      width: toRem(50);
-      height: toRem(40);
-      top: 25%;
-      left: 83.5%;
-
-      @include breakpoint-custom-down(620) {
-        width: toRem(40);
-        height: toRem(30);
-        left: 82.5%;
-      }
-
-      @include breakpoint-down(xs) {
-        width: toRem(38);
-        height: toRem(28);
-        left: 81.5%;
-      }
-
-      @include breakpoint-custom-down(400) {
-        width: toRem(36);
-        height: toRem(28);
-        left: 82.1%;
-      }
-
-      .heart {
-        &:before,
-        &:after {
-          position: absolute;
-          content: "";
-          left: toRem(17);
-          top: 0;
-          width: toRem(17);
-          height: toRem(30);
-          background: #d65858;
-          border-radius: 50px 50px 0 0;
-          transform: rotate(-45deg);
-          transform-origin: 0 100%;
-
-          @include breakpoint-down(xs) {
-            width: toRem(16);
-            height: toRem(26);
-          }
-
-          @include breakpoint-custom-down(400) {
-            left: toRem(14);
-            width: toRem(14);
-            height: toRem(24);
-          }
-        }
-
-        &:after {
-          left: 0;
-          transform: rotate(45deg);
-          transform-origin: 100% 100%;
         }
       }
     }

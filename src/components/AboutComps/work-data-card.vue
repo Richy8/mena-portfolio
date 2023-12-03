@@ -5,11 +5,11 @@
       @click="$emit('workDataClicked', workdata.id)"
     >
       <div>
-        <div class="work-duration">{{ workdata.duration }}</div>
-        <div class="work-title smooth-transition" title="Click to toggle tasks">
+        <h2 class="work-duration">{{ workdata.duration }}</h2>
+        <h2 class="work-title smooth-transition" title="Click to toggle tasks">
           {{ workdata.company }}
-        </div>
-        <div class="work-role">{{ workdata.role }}</div>
+        </h2>
+        <h2 class="work-role">{{ workdata.role }}</h2>
       </div>
 
       <div class="toggler rounded-circle pointer">

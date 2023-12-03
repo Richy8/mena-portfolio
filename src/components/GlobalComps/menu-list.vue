@@ -1,31 +1,48 @@
 <template>
   <div class="menu-list col-12 border-brand-red_">
-    <router-link to="/" class="menu-item menu-item-active">
+    <router-link
+      to="/"
+      class="menu-item menu-item-active"
+      aria-label="01 HOME"
+    >
       <div class="menu-count">01</div>
       <div class="menu-text">HOME</div>
     </router-link>
 
-    <a href="#about" class="menu-item">
+    <a
+      @click="routeToSection('about')"
+      href="javascript:void(0)"
+      class="menu-item"
+      aria-label="02 ABOUT ME"
+    >
       <div class="menu-count">02</div>
       <div class="menu-text">ABOUT ME</div>
     </a>
 
-    <a href="#projects" class="menu-item">
+    <a
+      @click="routeToSection('projects')"
+      href="javascript:void(0)"
+      class="menu-item"
+      aria-label="03 PROJECTS"
+    >
       <div class="menu-count">03</div>
       <div class="menu-text">PROJECTS</div>
     </a>
 
-    <!-- <router-link to="#" class="menu-item">
-      <div class="menu-count">04</div>
-      <div class="menu-text">CONTENT</div>
-    </router-link> -->
-
-    <router-link to="/contact" class="menu-item">
+    <a
+      href="#hire-me"
+      class="menu-item"
+      aria-label="04 CONTACT"
+    >
       <div class="menu-count">04</div>
       <div class="menu-text">CONTACT</div>
-    </router-link>
+    </a>
 
-    <router-link to="/schedule-session" class="menu-item">
+    <router-link
+      to="/schedule-session"
+      aria-label="05 DISCOVERY CALL"
+      class="menu-item"
+    >
       <div class="menu-count">05</div>
       <div class="menu-text">DISCOVERY CALL</div>
     </router-link>
@@ -63,6 +80,10 @@ export default {
           behavior: "smooth",
         });
       }
+    },
+
+    routeToSection(hash) {
+      location.href = `/#${hash}`;
     },
   },
 };

@@ -2,6 +2,7 @@
   <a
     href="/"
     class="brand-logo-section"
+    aria-label="Mena Portfolio"
     :class="[{ miniature: minimize }, { 'index-9': has_index }]"
   >
     <div class="icon icon-mena brand-yellow"></div>

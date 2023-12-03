@@ -1,12 +1,23 @@
 <template>
   <div class="container">
-    <div
-      class="photo-geometry"
-      data-aos="fade-up"
-      data-aos-delay="200"
-      data-aos-duration="1800"
-    >
-      <img :src="mxStaticImg('photo-collage.png')" alt="" class="h-auto" />
+    <div class="photo-geometry">
+      <picture class="h-auto">
+        <!-- WebP format for modern browsers -->
+        <source
+          srcset="
+            https://res.cloudinary.com/richy-jones/image/upload/v1701620230/photo-collage.webp
+          "
+          type="image/webp"
+          loading="lazy"
+        />
+
+        <!-- PNG format as a fallback for browsers that don't support WebP -->
+        <img
+          src="https://res.cloudinary.com/richy-jones/image/upload/v1701620230/photo-collage.png"
+          alt="Efemena Elvis photo collage"
+          loading="lazy"
+        />
+      </picture>
     </div>
   </div>
 </template>
@@ -27,11 +38,7 @@ export default {
   }
 
   img {
-    width: 90%;
-
-    @include breakpoint-down(md) {
-      width: 100%;
-    }
+    width: 100%;
   }
 }
 </style>

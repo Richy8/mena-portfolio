@@ -2,34 +2,26 @@
   <div class="portfolio-section" id="projects">
     <div class="container">
       <!-- META TEXT -->
-      <div class="page-meta-text">RECENT PROJECTS</div>
+      <h2 class="page-meta-text">RECENT PROJECTS</h2>
 
-      <div
-        class="title-top-row"
-        data-aos="fade-up"
-        data-aos-delay="200"
-        data-aos-duration="1800"
-      >
+      <div class="title-top-row">
         <!-- TITLE TEXT -->
-        <div class="page-title-text brand-light-grey mgb-0">
+        <h2 class="page-title-text brand-light-grey mgb-0">
           From Vision to Reality:
           <span class="brand-yellow">Showcasing My Projects</span>
-        </div>
+        </h2>
 
         <!-- QUOTE TEXT -->
-        <div class="quote-text">
+        <p class="quote-text">
           Embark on a journey where vision becomes reality. <br />
           A display of well crafted projects, reflecting dedication and
           creativity fused into a tangible masterpiece.
-        </div>
+        </p>
       </div>
 
       <div class="row w-100 mx-auto">
         <div
           class="col-12 col-md-4 project-wrapper smooth-animation"
-          data-aos="fade-up"
-          :data-aos-delay="(200 * (index + 1)).toString()"
-          data-aos-duration="1600"
           v-for="(project, index) in projectsList"
           :key="index"
         >

@@ -1,19 +1,14 @@
 <template>
   <div class="about-section" id="about">
     <div class="container">
-      <section
-        class="section section-left"
-        data-aos="fade-up"
-        data-aos-delay="200"
-        data-aos-duration="1800"
-      >
+      <section class="section section-left">
         <!-- META TEXT -->
-        <div class="page-meta-text">ABOUT ME</div>
+        <h2 class="page-meta-text">ABOUT ME</h2>
 
         <!-- TITLE TEXT -->
-        <div class="page-title-text brand-light-grey">
+        <h2 class="page-title-text brand-light-grey">
           About <span class="brand-yellow">Efemena Elvis</span>
-        </div>
+        </h2>
 
         <!-- DESCRIPTION BIO -->
         <div class="about-description brand-light-grey">
@@ -39,12 +34,7 @@
         <button class="btn btn-secondary">Preview Resume</button>
       </section>
 
-      <section
-        class="section section-right"
-        data-aos="fade-up"
-        data-aos-delay="200"
-        data-aos-duration="1800"
-      >
+      <section class="section section-right" data-aos="fade-up">
         <!-- TOOLS SECTION -->
         <tools-section />
       </section>

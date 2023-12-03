@@ -1,23 +1,13 @@
 <template>
   <div class="experience-section">
     <div class="container">
-      <div
-        class="title-text"
-        data-aos="fade-up"
-        data-aos-delay="200"
-        data-aos-duration="1800"
-      >
-        WORK HISTORY
-      </div>
+      <h2 class="title-text">WORK HISTORY</h2>
 
       <div class="row">
         <div class="col-12 col-md-10 col-xl-8 mx-auto">
           <!-- WORK TIMELINE -->
           <div class="work-timeline">
             <workDataCard
-              data-aos="fade-up"
-              :data-aos-delay="(200 * (index + 2)).toString()"
-              data-aos-duration="1600"
               v-for="(work, index) in experienceList"
               :key="index"
               :workdata="work"

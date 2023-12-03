@@ -2,73 +2,41 @@
   <div class="service-section">
     <div class="container">
       <!-- META TEXT -->
-      <div
-        class="page-meta-text"
-        data-aos="fade-up"
-        data-aos-delay="200"
-        data-aos-duration="1800"
-      >
-        MY SERVICES
-      </div>
+      <h2 class="page-meta-text">MY SERVICES</h2>
 
       <!-- TITLE TEXT -->
-      <div
-        class="page-title-text brand-light-grey text-center"
-        data-aos="fade-up"
-        data-aos-delay="200"
-        data-aos-duration="1800"
-      >
+      <h2 class="page-title-text brand-light-grey text-center">
         Empowering Businesses through
         <span class="brand-yellow">Innovative Services</span>
-      </div>
+      </h2>
 
       <!-- HELPER TEXT -->
-      <div
-        class="helper-text text-center"
-        data-aos="fade-up"
-        data-aos-delay="200"
-        data-aos-duration="1800"
-      >
+      <p class="helper-text text-center">
         Ignite your business's potential with bespoke solutions that fuel
         exponential growth and empower seamless scalability.
-      </div>
+      </p>
 
       <div>
         <div class="row">
-          <div
-            class="col-12 col-md-4"
-            data-aos="fade-down"
-            data-aos-delay="200"
-            data-aos-duration="1800"
-          >
+          <div class="col-12 col-md-4">
             <service-card
-              icon="cli-terminal.gif"
+              icon="https://res.cloudinary.com/richy-jones/image/upload/q_60/v1701627641/terminal.png"
               title="Front-End Development"
               description="I create user-friendly designs for web and mobile platforms, ensuring seamless experiences that drive business growth."
             />
           </div>
 
-          <div
-            class="col-12 col-md-4"
-            data-aos="fade-up"
-            data-aos-delay="300"
-            data-aos-duration="1800"
-          >
+          <div class="col-12 col-md-4">
             <service-card
-              icon="server.gif"
+              icon="https://res.cloudinary.com/richy-jones/image/upload/q_60/v1701627641/server.png"
               title="Back-End Development"
               description="I build scalable backend systems with efficient data management and seamless integrations, offering a strong foundation for growth."
             />
           </div>
 
-          <div
-            class="col-12 col-md-4"
-            data-aos="fade-down"
-            data-aos-delay="200"
-            data-aos-duration="1800"
-          >
+          <div class="col-12 col-md-4">
             <service-card
-              icon="globe.gif"
+              icon="https://res.cloudinary.com/richy-jones/image/upload/q_60/v1701627641/globe.png"
               title="Cloud Solutions"
               description="I empower your business with cost-effective cloud solutions through strategic architecture and operational scalability."
             />

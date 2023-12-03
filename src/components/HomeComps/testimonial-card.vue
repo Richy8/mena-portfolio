@@ -4,7 +4,7 @@
       <!-- TOP AREA -->
       <div class="top-area mgb-18">
         <div class="client-image rounded-circle">
-          <img :src="image" alt="" />
+          <img :src="image" :alt="name" />
         </div>
 
         <div>
@@ -16,9 +16,9 @@
       </div>
 
       <!-- BOTTOM AREA -->
-      <div class="bottom-area brand-light-grey">
+      <p class="bottom-area brand-light-grey">
         {{ comment }}
-      </div>
+      </p>
     </div>
   </Tilt>
 </template>
@@ -59,6 +59,7 @@ defineProps({
 
       img {
         @include background-cover;
+        @include square-shape(45);
       }
     }
 

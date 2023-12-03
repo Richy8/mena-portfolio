@@ -13,35 +13,10 @@ const routes = [
         name: "Home",
         component: home,
       },
-      // {
-      //   path: "/about",
-      //   name: "About",
-      //   component: () => import("@/pages/about-page"),
-      // },
-      // {
-      //   path: "/blog",
-      //   name: "Blog",
-      //   component: () => import("@/pages/blog-page"),
-      // },
-      // {
-      //   path: "/blog/:slug",
-      //   name: "BlogDetail",
-      //   component: () => import("@/pages/blog-detail"),
-      // },
-      // {
-      //   path: "/projects",
-      //   name: "Projects",
-      //   component: () => import("@/pages/projects-page"),
-      // },
       {
         path: "/project/:slug",
         name: "ProjectDetail",
         component: () => import("@/pages/project-detail"),
-      },
-      {
-        path: "/contact",
-        name: "Contact",
-        component: () => import("@/pages/contact-page"),
       },
       {
         path: "/schedule-session",

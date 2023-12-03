@@ -3,33 +3,18 @@
     <div class="row">
       <div class="contact-section col-12" id="hire-me">
         <!-- META TEXT -->
-        <div
-          class="meta-text brand-off-grey"
-          data-aos="fade-up"
-          data-aos-delay="200"
-          data-aos-duration="1800"
-        >
+        <h2 class="meta-text brand-off-grey">
           Need a High-Performing Software?
-        </div>
+        </h2>
 
         <!-- TITLE TEXT -->
-        <div
-          class="title-text brand-light-grey text-center text-uppercase"
-          data-aos="fade-up"
-          data-aos-delay="400"
-          data-aos-duration="1800"
-        >
+        <h2 class="title-text brand-light-grey text-center text-uppercase">
           Let's Get <span class="brand-yellow">Started.</span>
-        </div>
+        </h2>
 
         <!-- ACTIONS ROW -->
         <div class="actions-row">
-          <router-link
-            to="/schedule-session"
-            class="btn btn-primary"
-            data-aos="fade-up"
-            data-aos-delay="400"
-            data-aos-duration="1800"
+          <router-link to="/schedule-session" class="btn btn-primary"
             >Book a Free Discovery Call</router-link
           >
 
@@ -37,9 +22,6 @@
             href="https://wa.link/soa5b3"
             target="_blank"
             class="btn btn-secondary"
-            data-aos="fade-up"
-            data-aos-delay="400"
-            data-aos-duration="1800"
           >
             <span class="icon icon-whatsapp mgr-10"></span> Say Hi on
             Whatsapp</a

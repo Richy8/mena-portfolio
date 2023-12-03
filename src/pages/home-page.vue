@@ -21,9 +21,6 @@
     <!-- TESTIMONIAL SECTION -->
     <testimonial-section />
 
-    <!-- BLOG SECTION -->
-    <blog-section v-if="false" />
-
     <!-- CLIENT SECTION -->
     <client-section />
   </div>
@@ -33,7 +30,6 @@
 import { defineAsyncComponent } from "vue";
 import headerHeroSection from "@/components/HomeComps/header-hero-section";
 import photoGeometrySection from "@/components/HomeComps/photo-geometry-section";
-import blogSection from "@/components/HomeComps/blog-section";
 
 const aboutSection = defineAsyncComponent(() =>
   import("@/components/HomeComps/about-section")
@@ -63,13 +59,7 @@ export default {
     portfolioSection,
     experienceSection,
     testimonialSection,
-    blogSection,
     clientSection,
   },
 };
 </script>
-
-<style lang="scss" scoped>
-.home-page {
-}
-</style>

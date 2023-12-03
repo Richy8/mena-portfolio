@@ -3,15 +3,15 @@
     <div class="service-card w-100 rounded-10">
       <div class="img-wrapper rounded-7">
         <div class="position-relative w-100 h-100">
-          <img :src="mxStaticImg(icon)" alt="Image" />
+          <img :src="icon" :alt="title" />
         </div>
       </div>
 
-      <div class="title-text brand-light-grey">{{ title }}</div>
+      <h3 class="title-text brand-light-grey">{{ title }}</h3>
 
-      <div class="description-text brand-off-grey">
+      <p class="description-text brand-off-grey">
         {{ description }}
-      </div>
+      </p>
     </div>
   </Tilt>
 </template>

@@ -3,36 +3,26 @@
     <div class="container">
       <div class="row wrapper">
         <div class="copy-wrapper">
-          <div
-            class="copy-section"
-            data-aos="fade-up"
-            data-aos-delay="200"
-            data-aos-duration="1800"
-          >
+          <div class="copy-section">
             <!-- META TEXT -->
-            <div class="page-meta-text">CLIENT TESTIMONIALS</div>
+            <h2 class="page-meta-text">CLIENT TESTIMONIALS</h2>
 
             <!-- TITLE TEXT -->
-            <div class="page-title-text brand-light-grey">
+            <h2 class="page-title-text brand-light-grey">
               Building Trust through
               <span class="brand-yellow">Experience</span>
-            </div>
+            </h2>
 
             <!-- HELPER TEXT -->
-            <div class="description-text">
+            <p class="description-text">
               "Trust is the cornerstone of my successes. I don't just create
               products; I create trust. With every project, I listen intently to
               your vision, ensuring a perfect deliverable."
-            </div>
+            </p>
           </div>
         </div>
 
-        <div
-          class="testimonial-wrapper"
-          data-aos="fade-up"
-          data-aos-delay="200"
-          data-aos-duration="1800"
-        >
+        <div class="testimonial-wrapper">
           <div class="testimonials">
             <div class="content-col">
               <testimonial-card

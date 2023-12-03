@@ -3,7 +3,12 @@
     <!-- PROJECT IMAGE -->
     <div class="col-12">
       <div class="project-image">
-        <img :src="mxProjectImg(image)" alt="Image" class="w-100 h-auto" />
+        <img
+          :src="mxProjectImg(image)"
+          alt="Image"
+          class="w-100 h-100"
+          loading="lazy"
+        />
 
         <!-- IMAGE OVERLAY -->
         <div class="img-overlay w-100 h-100"></div>

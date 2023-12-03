@@ -24,6 +24,7 @@
             href="https://web.facebook.com/Lordelvis.95"
             target="_blank"
             class="social social-fb"
+            aria-label="Link to Efemena's Facebook page"
           >
             <div class="icon icon-facebook"></div>
           </a>
@@ -32,6 +33,7 @@
             href="https://twitter.com/ElvisRichie"
             target="_blank"
             class="social social-tw"
+            aria-label="Link to Efemena's Twiter page"
           >
             <div class="icon icon-twitter"></div>
           </a>
@@ -40,6 +42,7 @@
             href="https://www.instagram.com/efe_mena/"
             target="_blank"
             class="social social-in"
+            aria-label="Link to Efemena's Instagram page"
           >
             <div class="icon icon-instagram"></div>
           </a>
@@ -48,6 +51,7 @@
             href="https://www.linkedin.com/in/efemena-elvis/"
             target="_blank"
             class="social social-ln"
+            aria-label="Link to Efemena's LinkedIn page"
           >
             <div class="icon icon-linkedin"></div>
           </a>
@@ -56,6 +60,7 @@
             href="https://github.com/Richy8"
             target="_blank"
             class="social social-gh"
+            aria-label="Link to Efemena's Github page"
           >
             <div class="icon icon-github"></div>
           </a>
