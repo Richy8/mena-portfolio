@@ -33,7 +33,7 @@ export default {
     topNav,
     footerNav,
     contactCircle,
-    contactSection,
+    contactSection, 
   },
 };
 </script>
