@@ -10,7 +10,7 @@
 
         <div class="menu-list">
           <a
-            href="/home"
+            href="/"
             class="list-item tab-view"
             aria-label="Home"
             :class="{ 'active-link': $route.name === 'Home' && !$route.hash }"
@@ -35,19 +35,19 @@
             }"
             >Projects</a
           >
-          <a
+          <!-- <a
             href="#hire-me"
             class="list-item tab-view"
             aria-label="Contact"
             :class="{ 'active-link': $route.name === 'Contact' }"
             >Contact</a
-          >
+          > -->
 
           <a
             href="#hire-me"
-            aria-label="Hire Me Today"
+            aria-label="Get in Touch"
             class="list-item btn-grey"
-            >Hire Me Today</a
+            >Get in Touch</a
           >
         </div>
 
@@ -56,8 +56,8 @@
           <a
             href="#hire-me"
             class="list-item btn-grey"
-            aria-label="Hire Me Today"
-            >Hire Me Today</a
+            aria-label="Get in Touch"
+            >Get in Touch</a
           >
 
           <div

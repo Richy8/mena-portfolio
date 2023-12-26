@@ -20,7 +20,7 @@ export default {
   @include center-placement;
   width: max-content;
   padding-left: 14.5%;
-  color: rgba($brand-light-black, 0.65);
+  color: rgba($brand-light-black, 0.5);
 
   @include breakpoint-down(lg) {
     padding-left: 14%;

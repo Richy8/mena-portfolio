@@ -31,7 +31,12 @@
           </p>
         </div>
 
-        <button class="btn btn-secondary">Preview Resume</button>
+        <a
+          href="https://res.cloudinary.com/richy-jones/image/upload/v1703598003/EFEMENA_ELVIS_ARIAWHORAI_2024.pdf"
+          target="_blank"
+          class="btn btn-secondary"
+          >Preview Resume</a
+        >
       </section>
 
       <section class="section section-right" data-aos="fade-up">

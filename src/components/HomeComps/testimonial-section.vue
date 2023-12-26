@@ -26,7 +26,7 @@
           <div class="testimonials">
             <div class="content-col">
               <testimonial-card
-                image="https://media.licdn.com/dms/image/C4D03AQFkHUr1XheB4g/profile-displayphoto-shrink_100_100/0/1632600346229?e=1701907200&v=beta&t=uIk0bb028dUqfKSnvWaWZWhtfQfy_-KlelnX1E2yYa4"
+                image="https://res.cloudinary.com/richy-jones/image/upload/v1703514594/tomisin.jpg"
                 name="Tomisin Olaofe"
                 description="Future Services Lead at Jaguar Land Rover"
                 comment="Elvis diligence and work-ethic is second to none. Elvis intelligence and dedication to his work comes off quite easily. However, it's his emotional intelligence that makes him a standout engineer to work with. His willingness to work with cross department teammates to help to clarify their issues and explain things in clear terms makes him easy to work with."
@@ -42,18 +42,20 @@
 
             <div class="content-col">
               <testimonial-card
-                image="https://media.licdn.com/dms/image/D4D03AQEG9rmnWvmhhA/profile-displayphoto-shrink_400_400/0/1693991852870?e=1701907200&v=beta&t=HegoYN8KLfNqhoLieC-G9lokfWDEfGJAca1OjYReXKE"
+                image="https://res.cloudinary.com/richy-jones/image/upload/v1703514595/oluwaseyi.jpg"
                 name="Oluwaseyi Adelaju"
                 description="Growth Product Manager at SEAMFIX"
                 comment="Incredibly talented. Elvis is exceptionally dedicated to his work. During the period I worked with him, I noticed his eye for detail, teamwork spirit, and objectivity in every task assigned to him. He showed a great deal of determination in achieving set targets. Elvis is a valuable asset to any company he works with and above all an excellent colleague."
               />
 
               <testimonial-card
-                image="https://media.licdn.com/dms/image/C4E03AQHsTUxNYNdnsg/profile-displayphoto-shrink_400_400/0/1657287242023?e=1701907200&v=beta&t=yP1Gh7NG33-wt8tHud85cm_baL_51Yc77DibP0Vc_lg"
+                image="https://res.cloudinary.com/richy-jones/image/upload/v1703514594/imole.jpg"
                 name="Imole Oluyemi"
                 description="Team Lead at Class54/Techhaven Africa"
                 comment="Elvis is an exceptional software engineering leader known for ensuring on-time delivery and top-notch quality. He excels in communication, understanding both technical and business aspects. Elvis's passion for excellent user experiences makes him an ideal collaborator for design-oriented organisations. At Class54, Elvis played a crucial role in enhancing user touchpoints. He consistently delivers high-quality software on time and comes highly recommended, never failing to impress."
               />
+              <a href="tel:+"></a>
+              <a href="mailto:"></a>
             </div>
           </div>
         </div>
