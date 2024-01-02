@@ -35,29 +35,23 @@
             }"
             >Projects</a
           >
-          <!-- <a
-            href="#hire-me"
-            class="list-item tab-view"
-            aria-label="Contact"
-            :class="{ 'active-link': $route.name === 'Contact' }"
-            >Contact</a
-          > -->
-
           <a
-            href="#hire-me"
-            aria-label="Get in Touch"
-            class="list-item btn-grey"
+            href="https://wa.link/soa5b3"
+            target="_blank"
+            class="list-item tab-view"
+            aria-label="Chat on whatsapp"
             >Get in Touch</a
+          >
+
+          <router-link to="/schedule-session" class="list-item btn-grey"
+            >Book a Discovery Call</router-link
           >
         </div>
 
         <!-- MOBILE MENU SECTION -->
         <div class="mobile-wrapper">
-          <a
-            href="#hire-me"
-            class="list-item btn-grey"
-            aria-label="Get in Touch"
-            >Get in Touch</a
+          <router-link to="/schedule-session" class="list-item btn-grey"
+            >Book a Free Call</router-link
           >
 
           <div

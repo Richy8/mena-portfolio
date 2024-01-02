@@ -25,9 +25,14 @@
       <div class="menu-text">PROJECTS</div>
     </a>
 
-    <a href="#hire-me" class="menu-item" aria-label="04 CONTACT">
+    <a
+      href="https://wa.link/soa5b3"
+      target="_blank"
+      class="menu-item"
+      aria-label="04 CONTACT"
+    >
       <div class="menu-count">04</div>
-      <div class="menu-text">Get in Touch</div>
+      <div class="menu-text">GET IN TOUCH</div>
     </a>
 
     <router-link

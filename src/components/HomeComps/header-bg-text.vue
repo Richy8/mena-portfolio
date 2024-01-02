@@ -19,8 +19,8 @@ export default {
 .header-bg-text {
   @include center-placement;
   width: max-content;
-  padding-left: 14.5%;
-  color: rgba($brand-light-black, 0.5);
+  padding-left: 14%;
+  color: rgba($brand-light-black, 0.65);
 
   @include breakpoint-down(lg) {
     padding-left: 14%;
