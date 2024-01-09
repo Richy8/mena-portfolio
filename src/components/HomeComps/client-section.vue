@@ -2,12 +2,12 @@
   <div class="client-section">
     <div class="container">
       <!-- META TEXT -->
-      <h2 class="page-meta-text">ESTEEMED CLIENTS</h2>
+      <h2 class="page-meta-text">ESTEEMED BRANDS</h2>
 
       <!-- TITLE TEXT -->
       <h2 class="page-title-text brand-light-grey text-center">
-        Meet my
-        <span class="brand-yellow">Exceptional Clients</span>
+        Some
+        <span class="brand-yellow">Exceptional Brands</span> I've worked with
       </h2>
 
       <div class="row client-row brand-light-grey">

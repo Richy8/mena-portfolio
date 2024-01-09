@@ -70,7 +70,7 @@
       <!-- BOTTOM ROW -->
       <div class="footer-bottom">
         <div class="bottom-left">
-          All Rights Reserved. &copy; 2022 Mena Portfolio
+          All Rights Reserved. &copy; {{ getCurrentYear }} Mena Portfolio
         </div>
 
         <div class="bottom-right">
@@ -83,7 +83,10 @@
 </template>
 
 <script setup>
+import { computed } from "vue";
 import BrandLogo from "@/components/GlobalComps/brand-logo";
+
+const getCurrentYear = computed(() => new Date().getFullYear());
 </script>
 
 <style lang="scss" scoped>
