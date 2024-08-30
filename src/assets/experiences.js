@@ -1,10 +1,26 @@
 const experiences = [
   {
     id: 1,
-    duration: "OCT 2022",
+    duration: "SEPT 2022",
+    company: "VESICASH INNOVATIVE TECHNOLOGIES",
+    role: "SENIOR SOFTWARE LEAD ENGINEER",
+    visible: true,
+    responsibilities: [
+      "Implemented a feature module system, ensuring component isolation and a shared module for shared resources, enhancing code modularity and reusability.",
+
+      "Developed an automated currency wallet generation feature on account creation for local currencies, USD and GBP, improving user convenience and financial management.",
+
+      "Designed and implemented a robust currency exchange feature, enabling seamless conversion between different currencies with real-time rates.",
+
+      "Built an escrow payment facility, providing secure transactions and fostering trust between buyers and sellers.",
+    ],
+  },
+  {
+    id: 2,
+    duration: "OCT 2022 - September 2024",
     company: "PAVEHQ",
     role: "SENIOR SOFTWARE ENGINEER",
-    visible: true,
+    visible: false,
     responsibilities: [
       "Developed reusable components and libraries that improved code quality and development efficiency",
 
@@ -16,7 +32,7 @@ const experiences = [
     ],
   },
   {
-    id: 2,
+    id: 3,
     duration: "Sept 2022 - June 2023",
     company: "TALENTQL (Techstars '22)",
     role: "STUDENT MENTOR - VOLUNTEER",
@@ -31,23 +47,6 @@ const experiences = [
       "Provided hands-on assistance with troubleshooting, debugging, and code reviews, helping students overcome challenges and optimize their projects.",
     ],
   },
-  {
-    id: 3,
-    duration: "SEPT 2022",
-    company: "VESICASH INNOVATIVE TECHNOLOGIES",
-    role: "SENIOR SOFTWARE LEAD ENGINEER",
-    visible: false,
-    responsibilities: [
-      "Implemented a feature module system, ensuring component isolation and a shared module for shared resources, enhancing code modularity and reusability.",
-
-      "Developed an automated currency wallet generation feature on account creation for local currencies, USD and GBP, improving user convenience and financial management.",
-
-      "Designed and implemented a robust currency exchange feature, enabling seamless conversion between different currencies with real-time rates.",
-
-      "Built an escrow payment facility, providing secure transactions and fostering trust between buyers and sellers.",
-    ],
-  },
-
   {
     id: 4,
     duration: "AUG 2022 - SEPT 2022",
